@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us | KRITA Renewables — Get Your Free Solar Quote</title>
+  <meta name="description" content="Get a free solar quote and start slashing your energy bills today. Contact KRITA Renewables for an expert consultation within 24 hours.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+  <header class="header scrolled" id="header">
+    <div class="container nav-container">
+      <a href="index.html" class="logo" aria-label="KRITA Renewables Home">
+        <img src="assets/logo.png" alt="KRITA" class="logo-icon" >
+      </a>
+      <nav class="nav-menu" id="navMenu">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="services.html" class="nav-link">Services</a>
+        <a href="projects.html" class="nav-link">Projects</a>
+        <a href="why-solar.html" class="nav-link">Why Solar</a>
+        <a href="testimonials.html" class="nav-link">Testimonials</a>
+        <a href="faq.html" class="nav-link">FAQ</a>
+        <a href="contact.html" class="nav-link active">Contact</a>
+      </nav>
+      <div class="header-cta"><a href="contact.html" class="btn btn-primary">Get Free Quote</a></div>
+      <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle navigation"><span></span><span></span><span></span></button>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <div class="container reveal">
+        <span class="section-label">Contact Us</span>
+        <h1 class="section-title">Let's Talk Energy Independence</h1>
+        <p class="section-desc">Tell us a bit about your requirement—we’ll get back with a practical estimate.</p>
+      </div>
+    </section>
+
+    <section class="section-padding">
+      <div class="container">
+        <div class="contact-grid reveal">
+          <!-- Form Side -->
+          <div class="contact-form-side" id="formContainer">
+            <h3 style="font-size:1.5rem;margin-bottom:var(--sp-6)">Request Your Free Quote</h3>
+            <form id="contactForm">
+              <div class="form-group">
+                <label class="form-label" for="name">Full Name *</label>
+                <input type="text" id="name" class="form-control" required placeholder="Your full name">
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="phone">Phone Number *</label>
+                <input type="tel" id="phone" class="form-control" required placeholder="+91 98765 43210">
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="email">Email Address</label>
+                <input type="email" id="email" class="form-control" placeholder="you@company.com">
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="property">Property Type</label>
+                <select id="property" class="form-control calc-select">
+                  <option value="commercial">Commercial / Office</option>
+                  <option value="industrial">Industrial / Factory</option>
+                  <option value="utility">Utility / Land</option>
+                  <option value="residential">Residential</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="bill">Average Monthly Bill (₹)</label>
+                <input type="number" id="bill" class="form-control" placeholder="e.g. 50000">
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="message">Message</label>
+                <textarea id="message" class="form-control" placeholder="Tell us about your project requirements..."></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary btn-block">Request a quote. We’ll keep it simple and clear.</button>
+            </form>
+          </div>
+
+          <!-- Success Message (hidden by default) -->
+          <div class="success-msg" id="successMsg">
+            <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+            <h3>Request Received!</h3>
+            <p>One of our senior engineers will contact you within 24 hours with your customized savings report.</p>
+          </div>
+
+          <!-- Info Side -->
+          <div class="contact-info-side">
+            <h3 style="font-size:1.5rem;margin-bottom:var(--sp-3)">Direct Contact</h3>
+            <p style="color:rgba(255,255,255,.6);margin-bottom:var(--sp-8)">Prefer to speak with us immediately? Reach out directly.</p>
+
+            <div class="contact-detail">
+              <h4>📞 Phone</h4>
+              <p>[Your Number]</p>
+            </div>
+            <div class="contact-detail">
+              <h4>📧 Email</h4>
+              <p>[Your Email]</p>
+            </div>
+            <div class="contact-detail">
+              <h4>📍 Location</h4>
+              <p>Tamil Nadu, India</p>
+            </div>
+
+            <div class="map-embed">
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.1!2d80.22!3d13.05!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTPCsDAzJzAwLjAiTiA4MMKwMTMnMTIuMCJF!5e0!3m2!1sen!2sin!4v1" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="KRITA Office Location"></iframe>
+            </div>
+
+            <a href="https://wa.me/919876543210?text=Hi%20KRITA,%20I%20want%20a%20solar%20quote" class="btn btn-outline mt-6" style="border-color:#25D366;color:#25D366" target="_blank" rel="noopener">
+              💬 Chat on WhatsApp
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="logo" style="color:#fff" aria-label="KRITA Renewables Home">
+            <img src="assets/logo.png" alt="KRITA" class="logo-icon" >
+          </a>
+          <p>End-to-end renewable energy solutions powering India's commercial and industrial future.</p>
+        </div>
+        <div><h4>Company</h4><ul><li><a href="about.html">About Us</a></li><li><a href="projects.html">Case Studies</a></li><li><a href="testimonials.html">Testimonials</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+        <div><h4>Services</h4><ul><li><a href="services.html#solar">Solar Power</a></li><li><a href="services.html#wind">Wind Energy</a></li><li><a href="services.html#epc">Turnkey EPC</a></li><li><a href="services.html#om">O&M Services</a></li></ul></div>
+        <div><h4>Get In Touch</h4><div class="footer-contact"><p>📧 contact@kritarenewables.com</p><p>📞 +91 98765 43210</p><p>📍 Chennai, Tamil Nadu, India</p></div></div>
+      </div>
+      <div class="footer-bottom"><p>&copy; 2026 KRITA Renewables Pvt Ltd. All rights reserved.</p><p>CIN: U40108TN2024PTC123456</p></div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/form.js"></script>
+</body>
+</html>

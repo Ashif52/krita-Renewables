@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects | KRITA Renewables — Real Installations, Real Returns</title>
+  <meta name="description" content="Explore KRITA's portfolio of successful solar, wind, and EPC projects across India. Real metrics, real savings, real proof.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+  <header class="header scrolled" id="header">
+    <div class="container nav-container">
+      <a href="index.html" class="logo" aria-label="KRITA Renewables Home">
+        <img src="assets/logo.png" alt="KRITA" class="logo-icon" >
+      </a>
+      <nav class="nav-menu" id="navMenu">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="services.html" class="nav-link">Services</a>
+        <a href="projects.html" class="nav-link active">Projects</a>
+        <a href="why-solar.html" class="nav-link">Why Solar</a>
+        <a href="testimonials.html" class="nav-link">Testimonials</a>
+        <a href="faq.html" class="nav-link">FAQ</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
+      <div class="header-cta"><a href="contact.html" class="btn btn-primary">Get Free Quote</a></div>
+      <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle navigation"><span></span><span></span><span></span></button>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <div class="container reveal">
+        <span class="section-label">Case Studies</span>
+        <h1 class="section-title">A selection of completed and ongoing installations.</h1>
+        <p class="section-desc mt-3"><strong>Case Note:</strong> Each project is designed based on actual usage and site conditions—not a standard template.</p>
+      </div>
+    </section>
+
+    <!-- ===== FILTER + GRID ===== -->
+    <section class="section-padding">
+      <div class="container">
+        <!-- Filter Buttons -->
+        <div class="text-center reveal" style="margin-bottom:var(--sp-10)">
+          <button class="btn btn-primary filter-btn active" data-filter="all">All Projects</button>
+          <button class="btn btn-outline-dark filter-btn" data-filter="commercial">Commercial</button>
+          <button class="btn btn-outline-dark filter-btn" data-filter="industrial">Industrial</button>
+          <button class="btn btn-outline-dark filter-btn" data-filter="utility">Utility Scale</button>
+          <button class="btn btn-outline-dark filter-btn" data-filter="om">O&M</button>
+        </div>
+
+        <div class="projects-grid" id="projectsGrid">
+          <!-- Project 1 -->
+          <div class="project-card reveal" data-category="industrial">
+            <div class="project-img-wrap">
+              <img src="assets/images/1000193392.jpg" alt="1.2 MWp Industrial Setup" loading="lazy">
+              <span class="project-badge">Industrial</span>
+            </div>
+            <div class="project-body">
+              <h3 class="project-title">Industrial Setup — Neikuppam</h3>
+              <ul class="text-muted" style="list-style: none; padding: 0; font-size: .95rem; line-height: 1.8; margin-bottom: 0;">
+                <li><strong>Location:</strong> Neikuppam, TN</li>
+                <li><strong>Type:</strong> Industrial</li>
+                <li><strong>Capacity:</strong> 1.2 MWp</li>
+                <li><strong>Result:</strong> ~50% reduction in electricity cost</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Project 2 -->
+          <div class="project-card reveal reveal-delay-1" data-category="commercial">
+            <div class="project-img-wrap">
+              <img src="assets/images/1000193391.jpg" alt="850 kWp Logistics Park" loading="lazy">
+              <span class="project-badge">Commercial</span>
+            </div>
+            <div class="project-body">
+              <h3 class="project-title">Logistics Park — Chennai</h3>
+              <ul class="text-muted" style="list-style: none; padding: 0; font-size: .95rem; line-height: 1.8; margin-bottom: 0;">
+                <li><strong>Location:</strong> Chennai, TN</li>
+                <li><strong>Type:</strong> Commercial</li>
+                <li><strong>Capacity:</strong> 850 kWp</li>
+                <li><strong>Result:</strong> ~60% reduction in electricity cost</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Project 3 -->
+          <div class="project-card reveal reveal-delay-2" data-category="utility">
+            <div class="project-img-wrap">
+              <img src="assets/images/1000193393.jpg" alt="5 MWp Ground Mount" loading="lazy">
+              <span class="project-badge">Utility Scale</span>
+            </div>
+            <div class="project-body">
+              <h3 class="project-title">Ground Mount — Andhra Pradesh</h3>
+              <ul class="text-muted" style="list-style: none; padding: 0; font-size: .95rem; line-height: 1.8; margin-bottom: 0;">
+                <li><strong>Location:</strong> Andhra Pradesh</li>
+                <li><strong>Type:</strong> Utility Scale</li>
+                <li><strong>Capacity:</strong> 5 MWp</li>
+                <li><strong>Result:</strong> ~45% reduction in electricity cost</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Project 4 -->
+          <div class="project-card reveal" data-category="om">
+            <div class="project-img-wrap">
+              <img src="assets/images/1000193398.jpg" alt="O&M Portfolio" loading="lazy">
+              <span class="project-badge">O&M</span>
+            </div>
+            <div class="project-body">
+              <h3 class="project-title">Portfolio Management</h3>
+              <ul class="text-muted" style="list-style: none; padding: 0; font-size: .95rem; line-height: 1.8; margin-bottom: 0;">
+                <li><strong>Location:</strong> Multi-site</li>
+                <li><strong>Type:</strong> O&M</li>
+                <li><strong>Capacity:</strong> 15 MWp</li>
+                <li><strong>Result:</strong> ~12% increase in yield</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Project 5 -->
+          <div class="project-card reveal reveal-delay-1" data-category="commercial">
+            <div class="project-img-wrap">
+              <img src="assets/images/1000193396.jpg" alt="100 kWp Commercial" loading="lazy">
+              <span class="project-badge">Commercial</span>
+            </div>
+            <div class="project-body">
+              <h3 class="project-title">Commercial Setup — Chennai</h3>
+              <ul class="text-muted" style="list-style: none; padding: 0; font-size: .95rem; line-height: 1.8; margin-bottom: 0;">
+                <li><strong>Location:</strong> Chennai, TN</li>
+                <li><strong>Type:</strong> Commercial</li>
+                <li><strong>Capacity:</strong> 100 kWp</li>
+                <li><strong>Result:</strong> ~55% reduction in electricity cost</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Project 6 -->
+          <div class="project-card reveal reveal-delay-2" data-category="industrial">
+            <div class="project-img-wrap">
+              <img src="assets/images/1000193395.jpg" alt="Wind-Solar Hybrid" loading="lazy">
+              <span class="project-badge">Industrial</span>
+            </div>
+            <div class="project-body">
+              <h3 class="project-title">Hybrid Wind-Solar</h3>
+              <ul class="text-muted" style="list-style: none; padding: 0; font-size: .95rem; line-height: 1.8; margin-bottom: 0;">
+                <li><strong>Location:</strong> Kanyakumari, TN</li>
+                <li><strong>Type:</strong> Industrial</li>
+                <li><strong>Capacity:</strong> 2 MWp</li>
+                <li><strong>Result:</strong> ~40% reduction in electricity cost</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== CTA ===== -->
+    <section class="section-padding bg-surface">
+      <div class="container">
+        <div class="inline-cta reveal">
+          <div>
+            <h3>Want Results Like These?</h3>
+            <p>Contact us for a free site assessment and customized ROI report tailored to your facility.</p>
+          </div>
+          <a href="contact.html" class="btn btn-primary btn-lg">Get Your ROI Report →</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="logo" style="color:#fff" aria-label="KRITA Renewables Home">
+            <img src="assets/logo.png" alt="KRITA" class="logo-icon" >
+          </a>
+          <p>End-to-end renewable energy solutions powering India's commercial and industrial future.</p>
+        </div>
+        <div><h4>Company</h4><ul><li><a href="about.html">About Us</a></li><li><a href="projects.html">Case Studies</a></li><li><a href="testimonials.html">Testimonials</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+        <div><h4>Services</h4><ul><li><a href="services.html#solar">Solar Power</a></li><li><a href="services.html#wind">Wind Energy</a></li><li><a href="services.html#epc">Turnkey EPC</a></li><li><a href="services.html#om">O&M Services</a></li></ul></div>
+        <div><h4>Get In Touch</h4><div class="footer-contact"><p>📧 contact@kritarenewables.com</p><p>📞 +91 98765 43210</p><p>📍 Chennai, Tamil Nadu, India</p></div></div>
+      </div>
+      <div class="footer-bottom"><p>&copy; 2026 KRITA Renewables Pvt Ltd. All rights reserved.</p><p>CIN: U40108TN2024PTC123456</p></div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script>
+    // Project Filter
+    document.querySelectorAll('.filter-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('.filter-btn').forEach(b => { b.classList.remove('active'); b.classList.add('btn-outline-dark'); b.classList.remove('btn-primary'); });
+        btn.classList.add('active','btn-primary');
+        btn.classList.remove('btn-outline-dark');
+        const filter = btn.dataset.filter;
+        document.querySelectorAll('.project-card').forEach(card => {
+          if (filter === 'all' || card.dataset.category === filter) {
+            card.style.display = '';
+          } else {
+            card.style.display = 'none';
+          }
+        });
+      });
+    });
+  </script>
+</body>
+</html>

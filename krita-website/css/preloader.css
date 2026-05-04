@@ -1,0 +1,182 @@
+/* ===== PRELOADER ===== */
+/* Premium, interactive, and professional preloader */
+
+/* Full-screen fixed overlay - Curtain reveal setup */
+#preloader {
+  position: fixed;
+  inset: 0;
+  z-index: 10000;
+  background: var(--clr-secondary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  transition: transform 0.8s cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+/* Ambient rotating mesh background */
+.preloader-mesh {
+  position: absolute;
+  top: -50%; left: -50%; width: 200%; height: 200%;
+  background: radial-gradient(circle at 50% 50%, rgba(0,200,83,0.12), transparent 30%),
+              radial-gradient(circle at 80% 20%, rgba(0,200,83,0.08), transparent 25%);
+  animation: meshRotate 20s linear infinite;
+  z-index: 1;
+}
+
+@keyframes meshRotate {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* 3D Perspective Wrapper */
+.preloader-content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* JS interactive 3D tilt */
+  transform-style: preserve-3d;
+  will-change: transform;
+  transition: transform 0.1s ease-out, opacity 0.4s ease;
+}
+
+/* Exit state — slides up like a curtain */
+#preloader.preloader-done {
+  transform: translateY(-100%);
+}
+#preloader.preloader-done .preloader-content {
+  opacity: 0;
+  transform: translateY(30px) !important; /* Overrides JS inline transform */
+}
+
+/* Logo container */
+.preloader-logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0;
+  animation: preloaderFadeIn 0.8s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+}
+
+.preloader-logo img {
+  width: 200px;
+  height: auto;
+  will-change: transform, opacity;
+  filter: drop-shadow(0 10px 20px rgba(0,0,0,0.3));
+}
+
+/* Tagline */
+.preloader-tagline {
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.4);
+  margin-top: 16px;
+  text-align: center;
+  animation: preloaderFadeIn 0.8s 0.2s cubic-bezier(0.34, 1.56, 0.64, 1) both;
+}
+
+/* Subtle keyframes: smooth spring fade-in */
+@keyframes preloaderFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(12px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* Percentage and Bar Row */
+.preloader-progress {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-top: 32px;
+  animation: preloaderFadeIn 0.8s 0.3s cubic-bezier(0.34, 1.56, 0.64, 1) both;
+}
+
+/* Thin loading line */
+.preloader-bar {
+  width: 180px;
+  height: 3px;
+  background: rgba(255, 255, 255, 0.08);
+  position: relative;
+  overflow: hidden;
+  border-radius: 2px;
+}
+
+.preloader-bar-fill {
+  position: absolute;
+  top: 0; left: 0;
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(90deg, var(--clr-primary), #00E676);
+  border-radius: 2px;
+  box-shadow: 0 0 10px rgba(0,200,83,0.5);
+  transition: width 0.1s linear;
+}
+
+.preloader-percentage {
+  font-family: var(--font-heading);
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: #fff;
+  width: 50px;
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+/* ===== CONTENT HIDDEN UNTIL PRELOADER EXITS ===== */
+body.preloader-active > *:not(#preloader) {
+  opacity: 0;
+}
+
+body.preloader-active {
+  overflow: hidden;
+}
+
+/* Content reveal after preloader exits */
+body:not(.preloader-active) > *:not(#preloader) {
+  animation: contentReveal 0.6s 0.3s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+@keyframes contentReveal {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .preloader-logo img {
+    width: 160px;
+  }
+  .preloader-bar {
+    width: 140px;
+  }
+  .preloader-tagline {
+    font-size: 0.65rem;
+    letter-spacing: 0.16em;
+  }
+}
+
+@media (max-width: 480px) {
+  .preloader-logo img {
+    width: 130px;
+  }
+  .preloader-bar {
+    width: 120px;
+  }
+  .preloader-tagline {
+    font-size: 0.6rem;
+  }
+  .preloader-percentage {
+    font-size: 1rem;
+    width: 40px;
+  }
+}
