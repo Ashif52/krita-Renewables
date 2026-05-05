@@ -24,42 +24,42 @@
   document.body.classList.add('preloader-active');
 
   var dismissed = false;
-  var fill = document.getElementById('preloader-fill');
+  var circleFill = document.getElementById('preloader-fill-circle');
   var percentText = document.getElementById('preloader-percent');
   var content = document.getElementById('preloader-content');
   
   var progress = 0;
   var targetProgress = 0;
   var isLoaded = false;
+  var circleLength = 301.6; // 2 * PI * 48
 
   // 1. Interactive 3D mouse move tilt
   window.addEventListener('mousemove', function(e) {
     if(dismissed || !content) return;
-    // Calculate tilt: mapped from screen coordinates to degrees (-15 to 15)
-    var x = (e.clientX / window.innerWidth - 0.5) * 30; 
-    var y = (e.clientY / window.innerHeight - 0.5) * -30;
+    var x = (e.clientX / window.innerWidth - 0.5) * 20; 
+    var y = (e.clientY / window.innerHeight - 0.5) * -20;
     content.style.transform = `perspective(1000px) rotateX(${y}deg) rotateY(${x}deg)`;
   });
 
   // 2. Simulated loading progress
   var interval = setInterval(function() {
-    // Random jumps for realism
-    targetProgress += Math.random() * 12;
-    if(targetProgress > 90 && !isLoaded) {
-      targetProgress = 90; // Wait for real load at 90%
+    targetProgress += Math.random() * 10;
+    if(targetProgress > 95 && !isLoaded) {
+      targetProgress = 95;
     }
   }, 100);
 
   function updateVisuals() {
     if (progress < targetProgress) {
-      // Easing approach
-      progress += (targetProgress - progress) * 0.15;
+      progress += (targetProgress - progress) * 0.1;
     }
     
-    // Snap to 100 if very close
-    if (progress > 99.5) progress = 100;
+    if (progress > 99.8) progress = 100;
 
-    if (fill) fill.style.width = progress + '%';
+    if (circleFill) {
+      var offset = circleLength - (progress / 100) * circleLength;
+      circleFill.style.strokeDashoffset = offset;
+    }
     if (percentText) percentText.innerText = Math.round(progress) + '%';
     
     if (!dismissed) {

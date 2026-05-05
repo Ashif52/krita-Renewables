@@ -23,15 +23,23 @@
   <!-- ===== PRELOADER ===== -->
   <div id="preloader" role="status" aria-label="Loading">
     <div class="preloader-mesh"></div>
+    <div class="preloader-blobs">
+      <div class="blob blob-1"></div>
+      <div class="blob blob-2"></div>
+      <div class="blob blob-3"></div>
+    </div>
     <div class="preloader-content" id="preloader-content">
-      <div class="preloader-logo">
-        <img src="assets/logo.png" alt="KRITA Renewables" width="160" height="160">
-      </div>
-      <p class="preloader-tagline">Clean Energy for Industrial India</p>
-      <div class="preloader-progress">
-        <div class="preloader-bar">
-          <div class="preloader-bar-fill" id="preloader-fill"></div>
+      <div class="preloader-visual">
+        <svg class="preloader-circle" viewBox="0 0 100 100">
+          <circle class="circle-bg" cx="50" cy="50" r="48"></circle>
+          <circle class="circle-fill" id="preloader-fill-circle" cx="50" cy="50" r="48"></circle>
+        </svg>
+        <div class="preloader-logo">
+          <img src="assets/logo.png" alt="KRITA Renewables">
         </div>
+      </div>
+      <div class="preloader-text-wrap">
+        <p class="preloader-tagline">Clean Energy for Industrial India</p>
         <div class="preloader-percentage" id="preloader-percent">0%</div>
       </div>
     </div>
