@@ -138,6 +138,7 @@
   .page-hero{padding:120px 0 60px}
   .svc-img img{min-height:250px}
   .story-img img{min-height:280px}
+  .logo-icon{height:70px}
 }
 @media(max-width:480px){
   .stats-row{grid-template-columns:1fr}

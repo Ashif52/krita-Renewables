@@ -109,4 +109,97 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     });
+
+    // ===== 7. LIGHTBOX GALLERY =====
+    const galleryTriggers = document.querySelectorAll('.project-gallery-trigger');
+    const modal = document.getElementById('projectModal');
+    
+    if (modal) {
+        const modalClose = modal.querySelector('.modal-close');
+        const sliderContainer = modal.querySelector('.slider-container');
+        const dotsContainer = modal.querySelector('.slider-dots');
+        const prevBtn = modal.querySelector('.prev');
+        const nextBtn = modal.querySelector('.next');
+        const modalTitle = modal.querySelector('.modal-info h3');
+        const modalDesc = modal.querySelector('.modal-info p');
+        
+        let currentSlide = 0;
+        let images = [];
+
+        galleryTriggers.forEach(trigger => {
+            trigger.addEventListener('click', () => {
+                const projectTitle = trigger.getAttribute('data-project');
+                const projectDesc = trigger.getAttribute('data-desc');
+                const projectImages = trigger.getAttribute('data-images').split(',');
+                
+                images = projectImages;
+                modalTitle.textContent = projectTitle;
+                modalDesc.textContent = projectDesc;
+                
+                // Build slides and dots
+                sliderContainer.innerHTML = images.map((img, index) => `
+                    <div class="slide ${index === 0 ? 'active' : ''}">
+                        <img src="${img.trim()}" alt="${projectTitle} ${index + 1}">
+                    </div>
+                `).join('') + `
+                    <button class="slider-nav prev" aria-label="Previous slide">❮</button>
+                    <button class="slider-nav next" aria-label="Next slide">❯</button>
+                `;
+                
+                dotsContainer.innerHTML = images.map((_, index) => `
+                    <div class="dot ${index === 0 ? 'active' : ''}" data-index="${index}"></div>
+                `).join('');
+                
+                currentSlide = 0;
+                modal.classList.add('active');
+                document.body.style.overflow = 'hidden';
+                
+                // Re-bind nav buttons (since they were just created)
+                modal.querySelector('.prev').onclick = () => changeSlide(-1);
+                modal.querySelector('.next').onclick = () => changeSlide(1);
+                modal.querySelectorAll('.dot').forEach(dot => {
+                    dot.onclick = () => goToSlide(parseInt(dot.getAttribute('data-index')));
+                });
+            });
+        });
+
+        function changeSlide(direction) {
+            currentSlide = (currentSlide + direction + images.length) % images.length;
+            updateSlider();
+        }
+
+        function goToSlide(index) {
+            currentSlide = index;
+            updateSlider();
+        }
+
+        function updateSlider() {
+            const slides = modal.querySelectorAll('.slide');
+            const dots = modal.querySelectorAll('.dot');
+            
+            slides.forEach((slide, i) => {
+                slide.classList.toggle('active', i === currentSlide);
+            });
+            dots.forEach((dot, i) => {
+                dot.classList.toggle('active', i === currentSlide);
+            });
+        }
+
+        modalClose.onclick = () => {
+            modal.classList.remove('active');
+            document.body.style.overflow = '';
+        };
+
+        modal.onclick = (e) => {
+            if (e.target === modal) modalClose.onclick();
+        };
+
+        // Keyboard navigation
+        document.addEventListener('keydown', (e) => {
+            if (!modal.classList.contains('active')) return;
+            if (e.key === 'ArrowLeft') changeSlide(-1);
+            if (e.key === 'ArrowRight') changeSlide(1);
+            if (e.key === 'Escape') modalClose.onclick();
+        });
+    }
 });
