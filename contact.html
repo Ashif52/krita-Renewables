@@ -41,80 +41,162 @@
     <!-- ===== PAGE HERO ===== -->
     <section class="page-hero">
       <div class="container reveal">
-        <span class="section-label">Contact Us</span>
-        <h1 class="section-title">Let's talk about your project.</h1>
-        <p class="section-desc">We work with industrial facilities, large commercial clients, and institutions across Tamil Nadu and beyond. If you are evaluating a solar, wind, battery, or IPP project, we are glad to have a conversation.</p>
+        <span class="section-label">Get in Touch</span>
+        <h1 class="section-title">Let's build your<br><span class="text-primary">clean energy future.</span></h1>
+        <p class="section-desc">We specialize in utility-scale and industrial renewable energy infrastructure. Our team of engineers and project managers is ready to discuss your specific requirements.</p>
       </div>
     </section>
 
-    <!-- ===== CONTACT CONTENT ===== -->
-    <section class="section-padding" style="padding-top: 4rem;">
+    <!-- ===== CONTACT SECTION ===== -->
+    <section class="section-padding" style="padding-top: 0; margin-top: -60px; position: relative; z-index: 10;">
       <div class="container">
-        <div class="contact-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem;">
-          
-          <!-- Contact Info -->
-          <div class="contact-info reveal">
-            <h2 class="mb-6" style="font-size: 2rem; color: var(--clr-secondary);">Reach out directly</h2>
+        <div class="contact-grid reveal">
+          <!-- Form Side -->
+          <div class="contact-form-side">
+            <h2 class="mb-2">Send an Inquiry</h2>
+            <p class="text-muted mb-8">Fill out the form below and our team will get back to you within 24 hours.</p>
             
-            <div class="contact-method mb-8">
-              <h3 style="color: var(--clr-primary); font-size: 1.1rem; margin-bottom: 0.5rem; text-transform: uppercase; letter-spacing: 1px;">Registered Office</h3>
-              <p style="color: var(--clr-text-muted); line-height: 1.8; font-size: 1.1rem;">
-                United Apartment,<br>
-                New No. 9, Old No. 5,<br>
-                Palat Sankaran Road, Mahalingapuram,<br>
-                Nungambakkam, Chennai – 600 034,<br>
-                Tamil Nadu, India.
-              </p>
+            <form id="contactForm" onsubmit="event.preventDefault(); this.style.display='none'; document.getElementById('successMsg').style.display='block';">
+              <div class="form-group">
+                <label class="form-label" for="name">Full Name</label>
+                <input type="text" id="name" class="form-control" placeholder="John Doe" required>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="company">Company Name</label>
+                <input type="text" id="company" class="form-control" placeholder="Acme Corp" required>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="email">Work Email</label>
+                <input type="email" id="email" class="form-control" placeholder="john@company.com" required>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="phone">Phone Number</label>
+                <input type="tel" id="phone" class="form-control" placeholder="+91 00000 00000" required>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="message">Project Details</label>
+                <textarea id="message" class="form-control" placeholder="Tell us about your project requirements..." required></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary btn-block btn-lg mt-4">Send Message →</button>
+            </form>
+
+            <div id="successMsg" class="success-msg">
+              <div style="font-size: 3rem; color: var(--clr-primary); margin-bottom: 1rem;">✓</div>
+              <h3>Message Sent Successfully!</h3>
+              <p>Thank you for reaching out. One of our engineers will contact you shortly.</p>
+              <button onclick="location.reload()" class="btn btn-outline-dark mt-6">Send Another Message</button>
+            </div>
+          </div>
+
+          <!-- Info Side -->
+          <div class="contact-info-side">
+            <h3 style="color: #fff; margin-bottom: 2rem; font-size: 1.5rem;">Corporate Information</h3>
+            
+            <div class="contact-detail">
+              <h4>Registered Office</h4>
+              <p>United Apartment, New No. 9, Old No. 5,<br>Palat Sankaran Road, Mahalingapuram,<br>Nungambakkam, Chennai – 600 034,<br>Tamil Nadu, India.</p>
             </div>
 
-            <div class="contact-method mb-8">
-              <h3 style="color: var(--clr-primary); font-size: 1.1rem; margin-bottom: 0.5rem; text-transform: uppercase; letter-spacing: 1px;">Email Address</h3>
-              <p style="color: var(--clr-text-muted); line-height: 1.8; font-size: 1.1rem;">
-                <a href="mailto:info@kritarenewables.com" style="color: var(--clr-text-muted);">info@kritarenewables.com</a>
-              </p>
+            <div class="contact-detail">
+              <h4>Email Support</h4>
+              <p><a href="mailto:info@kritarenewables.com" style="color: rgba(255,255,255,.7)">info@kritarenewables.com</a></p>
             </div>
 
-            <div class="contact-method">
-              <h3 style="color: var(--clr-primary); font-size: 1.1rem; margin-bottom: 0.5rem; text-transform: uppercase; letter-spacing: 1px;">Contact Persons</h3>
+            <div class="contact-detail">
+              <h4>Direct Contacts</h4>
               <div style="margin-bottom: 1rem;">
-                <p style="color: var(--clr-secondary); font-weight: 700; font-size: 1.1rem; margin-bottom: 0.2rem;">Srinivasan N</p>
-                <p style="color: var(--clr-text-muted); font-size: 1.1rem;"><a href="tel:+918939737477" style="color: var(--clr-text-muted);">+91 89397 37477</a></p>
+                <p><strong>Srinivasan N</strong><br><a href="tel:+918939737477" style="color: rgba(255,255,255,.7)">+91 89397 37477</a></p>
               </div>
               <div>
-                <p style="color: var(--clr-secondary); font-weight: 700; font-size: 1.1rem; margin-bottom: 0.2rem;">Parthasarathy T S</p>
-                <p style="color: var(--clr-text-muted); font-size: 1.1rem;"><a href="tel:+918939908887" style="color: var(--clr-text-muted);">+91 89399 08887</a></p>
+                <p><strong>Parthasarathy T S</strong><br><a href="tel:+918939908887" style="color: rgba(255,255,255,.7)">+91 89399 08887</a></p>
+              </div>
+            </div>
+
+            <div class="map-embed">
+              <!-- Placeholder for Map - can be replaced with actual Google Maps embed -->
+              <div style="width: 100%; height: 200px; background: rgba(255,255,255,0.05); display: flex; align-items: center; justify-content: center; border-radius: var(--radius-md);">
+                <span style="color: rgba(255,255,255,0.3); font-size: 0.9rem;">Map: Mahalingapuram, Chennai</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== FAQ SECTION ===== -->
+    <section class="section-padding bg-surface">
+      <div class="container">
+        <div class="section-header text-center reveal">
+          <span class="section-label">Questions & Answers</span>
+          <h2 class="section-title">Frequently Asked Questions</h2>
+          <p class="section-desc">Find quick answers to common questions about our renewable energy services and project implementation.</p>
+        </div>
+
+        <div class="faq-list">
+          <!-- FAQ 1 -->
+          <div class="faq-item reveal">
+            <div class="faq-question">
+              <span>What types of industries do you serve?</span>
+              <div class="faq-icon">+</div>
+            </div>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">
+                We focus exclusively on industrial and large commercial clients. This includes manufacturing units, textile mills, cement plants, educational institutions, hospitals, and corporate parks. We do not provide services for individual residential projects.
               </div>
             </div>
           </div>
 
-          <!-- Contact Form -->
-          <div class="contact-form-wrap reveal reveal-delay-1" style="background: var(--clr-surface); padding: 3rem; border-radius: var(--radius-lg); border: 1px solid var(--clr-border);">
-            <h2 class="mb-6" style="font-size: 1.8rem; color: var(--clr-secondary);">Send an Inquiry</h2>
-            <form id="contactForm" onsubmit="event.preventDefault(); alert('Thank you for your inquiry. Our team will get back to you shortly.');">
-              <div class="form-group mb-4" style="margin-bottom: 1.5rem;">
-                <label for="name" style="display: block; margin-bottom: 0.5rem; font-weight: 600; color: var(--clr-secondary);">Full Name</label>
-                <input type="text" id="name" required style="width: 100%; padding: 12px 16px; border: 1px solid var(--clr-border); border-radius: 6px; font-family: inherit; font-size: 1rem; outline: none;">
+          <!-- FAQ 2 -->
+          <div class="faq-item reveal">
+            <div class="faq-question">
+              <span>Do you provide turnkey EPC services?</span>
+              <div class="faq-icon">+</div>
+            </div>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">
+                Yes, we provide end-to-end EPC (Engineering, Procurement, and Construction) services. This includes initial feasibility studies, detailed engineering design, procurement of high-quality components, professional installation, and final commissioning.
               </div>
-              <div class="form-group mb-4" style="margin-bottom: 1.5rem;">
-                <label for="company" style="display: block; margin-bottom: 0.5rem; font-weight: 600; color: var(--clr-secondary);">Company Name</label>
-                <input type="text" id="company" required style="width: 100%; padding: 12px 16px; border: 1px solid var(--clr-border); border-radius: 6px; font-family: inherit; font-size: 1rem; outline: none;">
-              </div>
-              <div class="form-group mb-4" style="margin-bottom: 1.5rem;">
-                <label for="email" style="display: block; margin-bottom: 0.5rem; font-weight: 600; color: var(--clr-secondary);">Email Address</label>
-                <input type="email" id="email" required style="width: 100%; padding: 12px 16px; border: 1px solid var(--clr-border); border-radius: 6px; font-family: inherit; font-size: 1rem; outline: none;">
-              </div>
-              <div class="form-group mb-4" style="margin-bottom: 1.5rem;">
-                <label for="phone" style="display: block; margin-bottom: 0.5rem; font-weight: 600; color: var(--clr-secondary);">Phone Number</label>
-                <input type="tel" id="phone" required style="width: 100%; padding: 12px 16px; border: 1px solid var(--clr-border); border-radius: 6px; font-family: inherit; font-size: 1rem; outline: none;">
-              </div>
-              <div class="form-group mb-6" style="margin-bottom: 2rem;">
-                <label for="message" style="display: block; margin-bottom: 0.5rem; font-weight: 600; color: var(--clr-secondary);">Project Details</label>
-                <textarea id="message" rows="4" required style="width: 100%; padding: 12px 16px; border: 1px solid var(--clr-border); border-radius: 6px; font-family: inherit; font-size: 1rem; outline: none; resize: vertical;"></textarea>
-              </div>
-              <button type="submit" class="btn btn-primary" style="width: 100%; justify-content: center;">Submit Inquiry</button>
-            </form>
+            </div>
           </div>
 
+          <!-- FAQ 3 -->
+          <div class="faq-item reveal">
+            <div class="faq-question">
+              <span>What is the typical ROI for an industrial solar project?</span>
+              <div class="faq-icon">+</div>
+            </div>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">
+                Most industrial rooftop solar projects in India see a payback period of 3 to 4 years. Given that the systems are designed to last 25 years, the remaining 21-22 years provide virtually free energy, significantly improving your bottom line.
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ 4 -->
+          <div class="faq-item reveal">
+            <div class="faq-question">
+              <span>How do you handle maintenance after installation?</span>
+              <div class="faq-icon">+</div>
+            </div>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">
+                We offer comprehensive O&M (Operation & Maintenance) packages that include 24/7 remote monitoring, periodic panel cleaning, electrical safety checks, and performance reporting to ensure your system operates at peak efficiency.
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ 5 -->
+          <div class="faq-item reveal">
+            <div class="faq-question">
+              <span>Can you help with financing or IPP models?</span>
+              <div class="faq-icon">+</div>
+            </div>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">
+                Yes, apart from the CAPEX model (where the client owns the plant), we also facilitate OPEX/PPA models through our investor network, where you only pay for the energy consumed without any upfront investment.
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
