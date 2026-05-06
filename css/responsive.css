@@ -178,6 +178,14 @@
   .service-feature-row.reverse .service-img {
     order: 1;
   }
+  .team-card-horizontal {
+    flex-direction: column;
+    padding: 2.5rem;
+    gap: 1.5rem;
+  }
+  .team-card-horizontal .team-avatar {
+    margin: 0;
+  }
 }
 @media(max-width:480px){
   .stats-row{grid-template-columns:1fr}

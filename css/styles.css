@@ -319,16 +319,16 @@ input,select,textarea{font-family:inherit}
 /* Why Us: text side wider — image is secondary support, not equal partner */
 .why-grid{display:grid;grid-template-columns:1.15fr 0.85fr;gap:var(--sp-16);align-items:center}
 .why-list{display:flex;flex-direction:column;gap:var(--sp-6)}
-.why-item{display:flex;gap:var(--sp-5);align-items:flex-start;padding:var(--sp-6);border-radius:var(--radius-md);transition:all .3s var(--ease)}
-.why-item:hover{background:var(--clr-surface)}
-.why-item .icon-box{flex-shrink:0;width:48px;height:48px;background:rgba(0,200,83,.1);border-radius:var(--radius-sm);display:flex;align-items:center;justify-content:center;color:var(--clr-primary)}
-.why-item h4{font-size:1.1rem;margin-bottom:var(--sp-2)}
-.why-item p{font-size:.9rem;color:var(--clr-text-muted);line-height:1.6}
-.why-image{border-radius:var(--radius-xl);overflow:hidden;position:relative}
-.why-image img{width:100%;height:100%;object-fit:cover;min-height:500px}
-.why-image .stat-float{position:absolute;bottom:var(--sp-6);left:var(--sp-6);background:rgba(11,17,32,.85);backdrop-filter:blur(16px);color:#fff;padding:var(--sp-5) var(--sp-6);border-radius:var(--radius-md);border:1px solid rgba(255,255,255,.1)}
-.why-image .stat-float .big{font-family:var(--font-heading);font-size:2rem;font-weight:800;color:var(--clr-primary)}
-.why-image .stat-float .small{font-size:.8rem;color:rgba(255,255,255,.6)}
+.why-item{display:flex;gap:var(--sp-6);align-items:flex-start;padding:var(--sp-8);border-radius:var(--radius-lg);transition:all .3s var(--ease);border:1px solid transparent}
+.why-item:hover{background:var(--clr-white);border-color:var(--clr-border);box-shadow:var(--shadow-lg)}
+.why-item .icon-box{flex-shrink:0;width:56px;height:56px;background:rgba(0,200,83,.1);border-radius:var(--radius-md);display:flex;align-items:center;justify-content:center;color:var(--clr-primary);font-size:1.5rem}
+.why-item h4{font-size:1.4rem;margin-bottom:var(--sp-3);color:var(--clr-secondary);font-weight:700}
+.why-item p{font-size:1.05rem;color:var(--clr-text-muted);line-height:1.7}
+.why-image{border-radius:var(--radius-xl);overflow:hidden;position:relative;box-shadow:var(--shadow-xl)}
+.why-image img{width:100%;height:100%;object-fit:cover;min-height:600px}
+.why-image .stat-float{position:absolute;bottom:var(--sp-8);left:var(--sp-8);background:var(--clr-secondary);backdrop-filter:blur(16px);color:#fff;padding:var(--sp-8) var(--sp-10);border-radius:var(--radius-lg);border:1px solid rgba(255,255,255,.1);box-shadow:var(--shadow-2xl)}
+.why-image .stat-float .big{font-family:var(--font-heading);font-size:2.8rem;font-weight:800;color:var(--clr-primary);line-height:1}
+.why-image .stat-float .small{font-size:1rem;color:rgba(255,255,255,.7);margin-top:var(--sp-2);font-weight:500}
 
 /* ===== TESTIMONIALS ===== */
 /* Testimonials: staggered cards — first taller, third offset down */
@@ -451,11 +451,57 @@ input,select,textarea{font-family:inherit}
   margin-bottom: 1rem;
 }
 .team-card-feature .team-avatar {
-  width: 80px;
-  height: 80px;
-  font-size: 1.5rem;
-  margin-bottom: 1.5rem;
+  width: 100px;
+  height: 100px;
+  font-size: 2rem;
+  margin-bottom: 2rem;
   margin-left: 0;
+  background: var(--clr-primary);
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  box-shadow: 0 8px 20px rgba(0, 200, 83, 0.2);
+}
+
+.team-card-horizontal {
+  display: flex;
+  gap: 3rem;
+  align-items: flex-start;
+  padding: 4rem;
+  background: var(--clr-surface);
+  border: 1px solid var(--clr-border);
+  border-radius: var(--radius-lg);
+  transition: all 0.3s var(--ease);
+}
+.team-card-horizontal:hover {
+  background: #fff;
+  box-shadow: var(--shadow-lg);
+  border-color: var(--clr-primary-light);
+}
+.team-card-horizontal .team-avatar {
+  flex-shrink: 0;
+}
+.team-card-horizontal h3 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  color: var(--clr-secondary);
+}
+.team-card-horizontal .role {
+  color: var(--clr-primary);
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  letter-spacing: 1px;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+}
+.team-card-horizontal p {
+  color: var(--clr-text-muted);
+  line-height: 1.8;
+  margin-bottom: 1rem;
+  font-size: 1.05rem;
 }
 
 /* ===== SERVICES: DETAIL ===== */
