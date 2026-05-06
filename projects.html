@@ -1,28 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Projects | KRITA Renewables</title>
-  <meta name="description" content="View Krita Renewables' executed projects. Industrial and institutional rooftop solar installations delivering real value.">
+  <meta name="description"
+    content="View Krita Renewables' executed projects. Industrial and institutional rooftop solar installations delivering real value.">
   <meta name="robots" content="index, follow">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;600;700;800&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
   <link rel="stylesheet" href="css/responsive.css">
 </head>
+
 <body>
 
   <!-- ===== HEADER ===== -->
   <header class="header scrolled" id="header">
     <div class="container nav-container">
       <a href="index.html" class="logo" aria-label="KRITA Renewables Home">
-        <img src="assets/logo.png" alt="KRITA" class="logo-icon" >
+        <img src="assets/logo.png" alt="KRITA" class="logo-icon">
       </a>
       <nav class="nav-menu" id="navMenu">
         <a href="index.html" class="nav-link">Home</a>
-        <a href="about.html" class="nav-link">Why Krita</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="why-krita.html" class="nav-link">Why Krita</a>
         <a href="services.html" class="nav-link">Services</a>
         <a href="projects.html" class="nav-link active">Projects</a>
         <a href="team.html" class="nav-link">Team</a>
@@ -43,62 +49,96 @@
       <div class="container reveal">
         <span class="section-label">Completed Projects</span>
         <h1 class="section-title">Solar installations delivered.</h1>
-        <p class="section-desc">Our executed projects to date are industrial and institutional rooftop solar installations — a foundation we are building on as we scale to ground-mounted and larger MW-class work.</p>
+        <p class="section-desc">Our executed projects to date are industrial and institutional rooftop solar
+          installations — a foundation we are building on as we scale to ground-mounted and larger MW-class work.</p>
       </div>
     </section>
 
     <!-- ===== PROJECTS SHOWCASE ===== -->
     <section class="section-padding">
       <div class="container">
-        <div class="projects-grid" style="grid-template-columns: 1fr; gap: 4rem;">
-          
+        <div class="projects-grid feature-projects-list">
+
           <!-- Project 1 -->
-          <div class="project-card reveal" style="display: grid; grid-template-columns: 1fr 1.2fr; gap: 3rem; background: var(--clr-surface); border: 1px solid var(--clr-border); border-radius: var(--radius-lg); overflow: hidden;">
-            <div class="project-img-wrap" style="height: 100%; min-height: 400px;">
-              <img src="assets/images/WhatsApp%20Image%202026-05-05%20at%2011.30.07%20PM.jpeg" alt="Bama Subramanian Memorial Hospital" loading="lazy" style="height: 100%; object-fit: cover;">
+          <div class="project-feature-card reveal">
+            <div class="project-img-wrap project-gallery-trigger" data-project="Bama Subramanian Memorial Hospital"
+              data-desc="Rooftop solar installation commissioned for an institutional healthcare facility. Full EPC scope, delivered and operational."
+              data-images="assets/images/image.png, assets/images/hospital-night.jpg, assets/images/hospital-event.jpg">
+              <img src="assets/images/image.png" alt="Bama Subramanian Memorial Hospital" loading="lazy">
               <span class="project-badge">Industrial Rooftop Solar EPC</span>
+              <div class="gallery-overlay">
+                <span class="gallery-btn">View Gallery</span>
+              </div>
             </div>
-            <div class="project-body" style="padding: 3rem; display: flex; flex-direction: column; justify-content: center;">
-              <h2 style="font-size: 2rem; margin-bottom: 1rem; color: var(--clr-secondary);">Bama Subramanian Memorial Hospital</h2>
-              <p class="text-muted" style="line-height: 1.8; margin-bottom: 2rem; font-size: 1.1rem;">Rooftop solar installation commissioned for an institutional healthcare facility. Full EPC scope, delivered and operational.</p>
-              <div class="project-metrics" style="display: flex; gap: 3rem; border-top: 1px solid var(--clr-border); padding-top: 2rem;">
+            <div class="project-body">
+              <h2>Bama Subramanian Memorial Hospital</h2>
+              <p class="text-muted">Rooftop solar installation commissioned for an institutional healthcare facility.
+                Full EPC scope, delivered and operational.</p>
+              <div class="project-metrics feature-metrics">
                 <div>
-                  <div class="metric-val" style="font-size: 1.8rem;">40 kW</div>
-                  <div class="metric-label" style="font-size: 0.9rem;">Installed Capacity</div>
+                  <div class="metric-val">40 kW</div>
+                  <div class="metric-label">Installed Capacity</div>
                 </div>
                 <div>
-                  <div class="metric-val text-primary" style="font-size: 1.8rem;">●</div>
-                  <div class="metric-label" style="font-size: 0.9rem;">Commissioned & Operational</div>
+                  <div class="metric-val text-primary">●</div>
+                  <div class="metric-label">Commissioned & Operational</div>
                 </div>
               </div>
             </div>
           </div>
 
           <!-- Project 2 -->
-          <div class="project-card reveal reveal-delay-1" style="display: grid; grid-template-columns: 1.2fr 1fr; gap: 3rem; background: var(--clr-surface); border: 1px solid var(--clr-border); border-radius: var(--radius-lg); overflow: hidden;">
-            <div class="project-body" style="padding: 3rem; display: flex; flex-direction: column; justify-content: center; order: 1;">
-              <h2 style="font-size: 2rem; margin-bottom: 1rem; color: var(--clr-secondary);">Vidya Sagar Campus</h2>
-              <p class="text-muted" style="line-height: 1.8; margin-bottom: 2rem; font-size: 1.1rem;">Rooftop solar system for an institutional campus. Scoped, engineered, and delivered as a turnkey project.</p>
-              <div class="project-metrics" style="display: flex; gap: 3rem; border-top: 1px solid var(--clr-border); padding-top: 2rem;">
+          <div class="project-feature-card reveal reverse reveal-delay-1">
+            <div class="project-body">
+              <h2>Vidya Sagar Campus</h2>
+              <p class="text-muted">Rooftop solar system for an institutional campus. Scoped, engineered, and delivered
+                as a turnkey project.</p>
+              <div class="project-metrics feature-metrics">
                 <div>
-                  <div class="metric-val" style="font-size: 1.8rem;">25 kW</div>
-                  <div class="metric-label" style="font-size: 0.9rem;">Installed Capacity</div>
+                  <div class="metric-val">25 kW</div>
+                  <div class="metric-label">Installed Capacity</div>
                 </div>
                 <div>
-                  <div class="metric-val text-primary" style="font-size: 1.8rem;">●</div>
-                  <div class="metric-label" style="font-size: 0.9rem;">Commissioned & Operational</div>
+                  <div class="metric-val text-primary">●</div>
+                  <div class="metric-label">Commissioned & Operational</div>
                 </div>
               </div>
             </div>
-            <div class="project-img-wrap project-gallery-trigger" 
-                 style="height: 100%; min-height: 400px; order: 2;"
-                 data-project="Vidya Sagar Campus" 
-                 data-desc="Rooftop solar system for an institutional campus. Scoped, engineered, and delivered as a turnkey project."
-                 data-images="assets/images/1.jpeg, assets/images/2.jpeg, assets/images/3.jpeg, assets/images/4.jpeg, assets/images/5.jpeg, assets/images/6.jpeg, assets/images/7.jpeg">
-              <img src="assets/images/2.jpeg" alt="Vidya Sagar Campus" loading="lazy" style="height: 100%; object-fit: cover;">
+            <div class="project-img-wrap project-gallery-trigger" data-project="Vidya Sagar Campus"
+              data-desc="Rooftop solar system for an institutional campus. Scoped, engineered, and delivered as a turnkey project."
+              data-images="assets/images/1.jpeg, assets/images/2.jpeg, assets/images/3.jpeg, assets/images/4.jpeg, assets/images/5.jpeg, assets/images/6.jpeg, assets/images/7.jpeg">
+              <img src="assets/images/2.jpeg" alt="Vidya Sagar Campus" loading="lazy">
               <span class="project-badge">Industrial Rooftop Solar EPC</span>
               <div class="gallery-overlay">
                 <span class="gallery-btn">View Gallery</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 3: Balu Auto Components -->
+          <div class="project-feature-card reveal reveal-delay-2">
+            <div class="project-img-wrap project-gallery-trigger" data-project="Balu Auto Components Private Limited"
+              data-desc="Executed 450 kW Rooftop Solar Power Project synchronized with 550 KVA Diesel Generator at Walajabad, Tamil Nadu. Delivered with high quality workmanship and on time."
+              data-images="assets/images/B1.jpg, assets/images/B2.jpg, assets/images/B3.jpg, assets/images/B4.jpg, assets/images/B5.jpg, assets/images/B6.jpg, assets/images/B7.jpg, assets/images/B8.jpg">
+              <img src="assets/images/B1.jpg" alt="Balu Auto Components Project" loading="lazy">
+              <span class="project-badge">Industrial Rooftop Solar EPC</span>
+              <div class="gallery-overlay">
+                <span class="gallery-btn">View Gallery</span>
+              </div>
+            </div>
+            <div class="project-body">
+              <h2>Balu Auto Components Private Limited</h2>
+              <p class="text-muted">450 kW Rooftop Solar Power Project synchronized with a 550 KVA Diesel Generator. A
+                complex industrial integration delivered with exemplary professionalism.</p>
+              <div class="project-metrics feature-metrics">
+                <div>
+                  <div class="metric-val">450 kW</div>
+                  <div class="metric-label">Installed Capacity</div>
+                </div>
+                <div>
+                  <div class="metric-val text-primary">●</div>
+                  <div class="metric-label">DG Synchronization</div>
+                </div>
               </div>
             </div>
           </div>
@@ -114,14 +154,16 @@
       <div class="footer-grid">
         <div class="footer-brand">
           <a href="index.html" class="logo" style="color:#fff" aria-label="KRITA Renewables Home">
-            <img src="assets/logo.png" alt="KRITA" class="logo-icon" >
+            <img src="assets/logo.png" alt="KRITA" class="logo-icon">
           </a>
-          <p>Engineering-led renewable energy company delivering clean energy solutions for industries and large-scale commercial clients.</p>
+          <p>Engineering-led renewable energy company delivering clean energy solutions for industries and large-scale
+            commercial clients.</p>
         </div>
         <div>
           <h4>Company</h4>
           <ul>
-            <li><a href="about.html">Why Krita</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="why-krita.html">Why Krita</a></li>
             <li><a href="services.html">Services</a></li>
             <li><a href="projects.html">Projects</a></li>
             <li><a href="team.html">Leadership Team</a></li>
@@ -143,7 +185,8 @@
             <p><strong>Srinivasan N</strong><br>📞 +91 89397 37477</p>
             <p class="mt-3"><strong>Parthasarathy T S</strong><br>📞 +91 89399 08887</p>
             <p class="mt-3">📧 info@kritarenewables.com</p>
-            <p class="mt-3">📍 United Apartment, New No. 9, Old No. 5, Palat Sankaran Road, Mahalingapuram, Nungambakkam, Chennai – 600 034, Tamil Nadu, India.</p>
+            <p class="mt-3">📍 United Apartment, New No. 9, Old No. 5, Palat Sankaran Road, Mahalingapuram,
+              Nungambakkam, Chennai – 600 034, Tamil Nadu, India.</p>
           </div>
         </div>
       </div>
@@ -172,4 +215,5 @@
 
   <script src="js/main.js"></script>
 </body>
+
 </html>

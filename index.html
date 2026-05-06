@@ -59,7 +59,8 @@
       </a>
       <nav class="nav-menu" id="navMenu">
         <a href="index.html" class="nav-link active">Home</a>
-        <a href="about.html" class="nav-link">Why Krita</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="why-krita.html" class="nav-link">Why Krita</a>
         <a href="services.html" class="nav-link">Services</a>
         <a href="projects.html" class="nav-link">Projects</a>
         <a href="team.html" class="nav-link">Team</a>
@@ -96,32 +97,32 @@
     <!-- ===== ABOUT SNIPPET ===== -->
     <section class="section-padding bg-surface">
       <div class="container">
-        <div class="row align-center" style="display:grid; grid-template-columns: 1fr 1fr; gap: 4rem;">
+        <div class="responsive-grid-2">
           <div class="reveal">
             <span class="section-label">Why Krita</span>
             <h2 class="section-title">Built on experience. Focused on industry.</h2>
             <p class="section-desc mt-4">Krita Renewables Private Limited is a Chennai-based renewable energy company with a focused mandate: delivering reliable, scalable clean energy infrastructure for industrial and large commercial clients.</p>
             <p class="section-desc mt-3">Promoted and managed by a senior leadership team with decades of hands-on experience across solar, wind, biomass, and small hydro, Krita brings institutional-grade capability to every engagement.</p>
             <div class="mt-6">
-              <a href="about.html" class="btn btn-outline-dark">Read our full story →</a>
+              <a href="why-krita.html" class="btn btn-outline-dark">Read our full story →</a>
             </div>
           </div>
-          <div class="stats-grid grid-2-col reveal reveal-delay-1" style="display:grid; grid-template-columns: 1fr 1fr; gap: 1.5rem;">
-            <div class="stat-card" style="background:#fff; padding: 2rem; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.05);">
-              <h3 style="font-size: 2.5rem; color: var(--clr-primary); margin-bottom: 0.5rem;">200+</h3>
-              <p style="font-weight: 600; font-size: 0.9rem;">Years Combined Experience</p>
+          <div class="responsive-grid-2 reveal reveal-delay-1" style="gap: 1.5rem;">
+            <div class="stat-card-custom">
+              <h3>200+</h3>
+              <p>Years Combined Experience</p>
             </div>
-            <div class="stat-card" style="background:#fff; padding: 2rem; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.05);">
-              <h3 style="font-size: 2.5rem; color: var(--clr-primary); margin-bottom: 0.5rem;">300+</h3>
-              <p style="font-weight: 600; font-size: 0.9rem;">MW Wind & Solar Commissioned</p>
+            <div class="stat-card-custom">
+              <h3>300+</h3>
+              <p>MW Wind & Solar Commissioned</p>
             </div>
-            <div class="stat-card" style="background:#fff; padding: 2rem; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.05);">
-              <h3 style="font-size: 2.5rem; color: var(--clr-primary); margin-bottom: 0.5rem;">₹3K Cr+</h3>
-              <p style="font-weight: 600; font-size: 0.9rem;">Debt Raised for Renewables</p>
+            <div class="stat-card-custom">
+              <h3>₹3K Cr+</h3>
+              <p>Debt Raised for Renewables</p>
             </div>
-            <div class="stat-card" style="background:#fff; padding: 2rem; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.05);">
-              <h3 style="font-size: 2.5rem; color: var(--clr-primary); margin-bottom: 0.5rem;">35 MW</h3>
-              <p style="font-weight: 600; font-size: 0.9rem;">Biomass Plants Built & Operated</p>
+            <div class="stat-card-custom">
+              <h3>35 MW</h3>
+              <p>Biomass Plants Built & Operated</p>
             </div>
           </div>
         </div>
@@ -231,7 +232,7 @@
           </div>
           <div class="service-card reveal reveal-delay-3">
             <div class="card-icon">
-              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 17 22 12"/></svg>
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>
             </div>
             <div style="background: rgba(0,0,0,0.05); color: var(--clr-text-muted); font-size: 0.75rem; font-weight: 700; padding: 4px 10px; border-radius: 20px; display: inline-block; margin-bottom: 12px;">IN DEVELOPMENT</div>
             <h3 class="card-title">Solar & Wind IPP Ownership</h3>
@@ -254,9 +255,15 @@
         </div>
         <div class="projects-grid" style="grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));">
           <div class="project-card reveal">
-            <div class="project-img-wrap">
+            <div class="project-img-wrap project-gallery-trigger" 
+                 data-project="Bama Subramanian Memorial Hospital" 
+                 data-desc="Rooftop solar installation commissioned for an institutional healthcare facility. Full EPC scope, delivered and operational."
+                 data-images="assets/images/image.png, assets/images/hospital-night.jpg, assets/images/hospital-event.jpg">
               <img src="assets/images/image.png" alt="Bama Subramanian Memorial Hospital" loading="lazy">
               <span class="project-badge">Industrial Rooftop Solar EPC</span>
+              <div class="gallery-overlay">
+                <span class="gallery-btn">View Gallery</span>
+              </div>
             </div>
             <div class="project-body">
               <h3 class="project-title">Bama Subramanian Memorial Hospital</h3>
@@ -287,6 +294,26 @@
               </div>
             </div>
           </div>
+          <div class="project-card reveal reveal-delay-2">
+            <div class="project-img-wrap project-gallery-trigger" 
+                 data-project="Balu Auto Components" 
+                 data-desc="400 kW Rooftop Solar Power Project synchronized with a 550 KVA Diesel Generator at Walajabad."
+                 data-images="assets/images/B1.jpg, assets/images/B2.jpg, assets/images/B3.jpg, assets/images/B4.jpg, assets/images/B5.jpg, assets/images/B6.jpg, assets/images/B7.jpg, assets/images/B8.jpg">
+              <img src="assets/images/B1.jpg" alt="Balu Auto Components" loading="lazy">
+              <span class="project-badge">Industrial Rooftop Solar EPC</span>
+              <div class="gallery-overlay">
+                <span class="gallery-btn">View Gallery</span>
+              </div>
+            </div>
+            <div class="project-body">
+              <h3 class="project-title">Balu Auto Components</h3>
+              <p class="text-muted mb-4">400 kW Rooftop Solar Power Project synchronized with a 550 KVA Diesel Generator.</p>
+              <div class="project-metrics">
+                <div><div class="metric-val">400 kW</div><div class="metric-label">Installed Capacity</div></div>
+                <div><div class="metric-val text-primary" style="font-size: 1rem;">●</div><div class="metric-label">DG Sync</div></div>
+              </div>
+            </div>
+          </div>
         </div>
         <div class="mt-6 d-block-mobile">
           <a href="projects.html" class="btn btn-outline-dark">View All Projects →</a>
@@ -308,7 +335,8 @@
         <div>
           <h4>Company</h4>
           <ul>
-            <li><a href="about.html">Why Krita</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="why-krita.html">Why Krita</a></li>
             <li><a href="services.html">Services</a></li>
             <li><a href="projects.html">Projects</a></li>
             <li><a href="team.html">Leadership Team</a></li>

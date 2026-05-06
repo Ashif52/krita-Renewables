@@ -22,7 +22,8 @@
       </a>
       <nav class="nav-menu" id="navMenu">
         <a href="index.html" class="nav-link">Home</a>
-        <a href="about.html" class="nav-link">Why Krita</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="why-krita.html" class="nav-link">Why Krita</a>
         <a href="services.html" class="nav-link active">Services</a>
         <a href="projects.html" class="nav-link">Projects</a>
         <a href="team.html" class="nav-link">Team</a>
@@ -128,15 +129,15 @@
         <div class="services-list" style="display: grid; gap: 4rem;"> -->
           
           <!-- Solar EPC -->
-          <div class="service-row reveal" id="solar" style="display: grid; grid-template-columns: 1fr 1.2fr; gap: 3rem; align-items: center;">
-            <div class="service-img" style="border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-md);">
-              <img src="assets/images/1000193395.jpg" alt="Solar EPC" style="width: 100%; height: auto; display: block;">
+          <div class="service-feature-row reveal" id="solar">
+            <div class="service-img">
+              <img src="assets/images/1000193395.jpg" alt="Solar EPC">
             </div>
             <div class="service-info">
-              <div style="background: rgba(0,200,83,0.1); color: var(--clr-primary); font-size: 0.8rem; font-weight: 700; padding: 6px 14px; border-radius: 20px; display: inline-block; margin-bottom: 16px;">ACTIVE</div>
-              <h2 style="font-size: 2.2rem; margin-bottom: 1rem; color: var(--clr-secondary);">Solar EPC</h2>
-              <p style="color: var(--clr-text-muted); line-height: 1.8; margin-bottom: 1.5rem; font-size: 1.05rem;">End-to-end engineering, procurement, and construction for rooftop (KW-scale) and ground-mounted (MW-scale) solar projects.</p>
-              <ul class="svc-features mb-6">
+              <div class="status-badge active">ACTIVE</div>
+              <h2>Solar EPC</h2>
+              <p>End-to-end engineering, procurement, and construction for rooftop (KW-scale) and ground-mounted (MW-scale) solar projects.</p>
+              <ul class="svc-features">
                 <li>Manage the complete project lifecycle from site assessment to commissioning</li>
                 <li>Execution begins in Tamil Nadu with planned expansion across other Indian states</li>
                 <li>Expansion into international markets planned from year five</li>
@@ -146,32 +147,32 @@
           </div>
 
           <!-- Battery Management -->
-          <div class="service-row reveal reveal-delay-1" id="battery" style="display: grid; grid-template-columns: 1.2fr 1fr; gap: 3rem; align-items: center; margin-top: 2rem;">
-            <div class="service-info" style="order: 1;">
-              <div style="background: rgba(0,0,0,0.05); color: var(--clr-text-muted); font-size: 0.8rem; font-weight: 700; padding: 6px 14px; border-radius: 20px; display: inline-block; margin-bottom: 16px;">IN DEVELOPMENT</div>
-              <h2 style="font-size: 2.2rem; margin-bottom: 1rem; color: var(--clr-secondary);">Battery Management Solutions</h2>
-              <p style="color: var(--clr-text-muted); line-height: 1.8; margin-bottom: 1.5rem; font-size: 1.05rem;">Battery storage solutions serving the wind, solar, green hydrogen, and EV segments.</p>
-              <ul class="svc-features mb-6">
+          <div class="service-feature-row reveal reverse reveal-delay-1" id="battery">
+            <div class="service-info">
+              <div class="status-badge">IN DEVELOPMENT</div>
+              <h2>Battery Management Solutions</h2>
+              <p>Battery storage solutions serving the wind, solar, green hydrogen, and EV segments.</p>
+              <ul class="svc-features">
                 <li>Identifying suitable technology partners for joint venture or technology transfer</li>
                 <li>Manufacturing planned near Chennai to serve industrial-scale deployments</li>
                 <li>Focused on high-efficiency, reliable energy storage</li>
               </ul>
             </div>
-            <div class="service-img" style="border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-md); order: 2;">
-              <img src="assets/images/Battery Management Solutions.jpg" alt="Battery Management" style="width: 100%; height: auto; display: block;">
+            <div class="service-img">
+              <img src="assets/images/Battery Management Solutions.jpg" alt="Battery Management">
             </div>
           </div>
 
           <!-- Wind Turbines -->
-          <div class="service-row reveal reveal-delay-2" id="wind" style="display: grid; grid-template-columns: 1fr 1.2fr; gap: 3rem; align-items: center; margin-top: 2rem;">
-            <div class="service-img" style="border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-md);">
-              <img src="assets/images/Wind Turbine Generators.jpg" alt="Wind Turbine Generators" style="width: 100%; height: auto; display: block;">
+          <div class="service-feature-row reveal reveal-delay-2" id="wind">
+            <div class="service-img">
+              <img src="assets/images/Wind Turbine Generators.jpg" alt="Wind Turbine Generators">
             </div>
             <div class="service-info">
-              <div style="background: rgba(0,0,0,0.05); color: var(--clr-text-muted); font-size: 0.8rem; font-weight: 700; padding: 6px 14px; border-radius: 20px; display: inline-block; margin-bottom: 16px;">IN DEVELOPMENT</div>
-              <h2 style="font-size: 2.2rem; margin-bottom: 1rem; color: var(--clr-secondary);">Wind Turbine Generators</h2>
-              <p style="color: var(--clr-text-muted); line-height: 1.8; margin-bottom: 1.5rem; font-size: 1.05rem;">Development of highly efficient, cost-effective wind turbine generators.</p>
-              <ul class="svc-features mb-6">
+              <div class="status-badge">IN DEVELOPMENT</div>
+              <h2>Wind Turbine Generators</h2>
+              <p>Development of highly efficient, cost-effective wind turbine generators.</p>
+              <ul class="svc-features">
                 <li>Initially 1 MW and 1.86 MW units for the repowering market</li>
                 <li>Scaling to 6 MW turbines for large IPP deployment</li>
                 <li>Design consulting agencies and key suppliers have been identified</li>
@@ -181,19 +182,19 @@
           </div>
 
           <!-- IPP Ownership -->
-          <div class="service-row reveal reveal-delay-3" id="ipp" style="display: grid; grid-template-columns: 1.2fr 1fr; gap: 3rem; align-items: center; margin-top: 2rem;">
-            <div class="service-info" style="order: 1;">
-              <div style="background: rgba(0,0,0,0.05); color: var(--clr-text-muted); font-size: 0.8rem; font-weight: 700; padding: 6px 14px; border-radius: 20px; display: inline-block; margin-bottom: 16px;">IN DEVELOPMENT</div>
-              <h2 style="font-size: 2.2rem; margin-bottom: 1rem; color: var(--clr-secondary);">Solar & Wind IPP Ownership</h2>
-              <p style="color: var(--clr-text-muted); line-height: 1.8; margin-bottom: 1.5rem; font-size: 1.05rem;">Development and ownership of solar and wind independent power producer projects through structured SPVs with co-investors.</p>
-              <ul class="svc-features mb-6">
+          <div class="service-feature-row reveal reveal-delay-3" id="ipp">
+            <div class="service-info">
+              <div class="status-badge">IN DEVELOPMENT</div>
+              <h2>Solar & Wind IPP Ownership</h2>
+              <p>Development and ownership of solar and wind independent power producer projects through structured SPVs with co-investors.</p>
+              <ul class="svc-features">
                 <li>Green energy generated is sold directly to reputed industrial corporates</li>
                 <li>Targeting cumulative ownership of approximately 700 MW by end of year five</li>
                 <li>Biomass-based renewable energy is also within scope</li>
               </ul>
             </div>
-            <div class="service-img" style="border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-md); order: 2;">
-              <img src="assets/images/1000193394.jpg" alt="IPP Ownership" style="width: 100%; height: auto; display: block;">
+            <div class="service-img">
+              <img src="assets/images/1000193394.jpg" alt="IPP Ownership">
             </div>
           </div>
 
@@ -215,7 +216,8 @@
         <div>
           <h4>Company</h4>
           <ul>
-            <li><a href="about.html">Why Krita</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="why-krita.html">Why Krita</a></li>
             <li><a href="services.html">Services</a></li>
             <li><a href="projects.html">Projects</a></li>
             <li><a href="team.html">Leadership Team</a></li>

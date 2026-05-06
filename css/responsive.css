@@ -130,6 +130,27 @@
   .stats-row{grid-template-columns:repeat(2,1fr)}
   .contact-grid{grid-template-columns:1fr}
   .contact-info-side{order:2}
+  
+  .project-feature-card,
+  .project-feature-card.reverse {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+  .project-feature-card .project-body,
+  .project-feature-card.reverse .project-body {
+    padding: 2rem;
+    order: 2;
+  }
+  .project-feature-card .project-img-wrap,
+  .project-feature-card.reverse .project-img-wrap {
+    height: 300px;
+    min-height: auto;
+    order: 1;
+  }
+  .feature-metrics {
+    gap: 1.5rem;
+    flex-wrap: wrap;
+  }
 }
 @media(max-width:768px){
   .values-grid,.benefits-grid{grid-template-columns:1fr}
@@ -138,7 +159,25 @@
   .page-hero{padding:120px 0 60px}
   .svc-img img{min-height:250px}
   .story-img img{min-height:280px}
-  .logo-icon{height:70px}
+  .logo-icon{height:60px}
+  .responsive-grid-2,
+  .responsive-grid-4 {
+    grid-template-columns: 1fr;
+    gap: var(--sp-6);
+  }
+  .service-feature-row,
+  .service-feature-row.reverse {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  .service-feature-row .service-info,
+  .service-feature-row.reverse .service-info {
+    order: 2;
+  }
+  .service-feature-row .service-img,
+  .service-feature-row.reverse .service-img {
+    order: 1;
+  }
 }
 @media(max-width:480px){
   .stats-row{grid-template-columns:1fr}
