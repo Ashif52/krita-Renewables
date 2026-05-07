@@ -1,89 +1,109 @@
-/* ===== MODERN & ELEGANT PRELOADER ===== */
+/* ===== PRELOADER ===== */
+body.preloader-active {
+  overflow: hidden;
+}
+
 #preloader {
   position: fixed;
   inset: 0;
-  z-index: 10000;
-  background: #05080f; /* Deeper dark for premium feel */
+  z-index: 9999;
+  background: var(--clr-secondary, #0B1120);
   display: flex;
   align-items: center;
   justify-content: center;
-  overflow: hidden;
-  transition: opacity 0.8s cubic-bezier(0.77, 0, 0.175, 1), 
-              visibility 0.8s cubic-bezier(0.77, 0, 0.175, 1);
+  transition: opacity 0.6s ease, visibility 0.6s ease;
 }
 
-/* Ambient "Clean Energy" Blobs */
-.preloader-blobs {
-  position: absolute;
-  inset: 0;
-  z-index: 1;
-  filter: blur(80px);
-  opacity: 0.6;
-}
-
-.blob {
-  position: absolute;
-  border-radius: 50%;
-  background: var(--clr-primary);
-  animation: blobFloat 15s infinite alternate ease-in-out;
-}
-
-.blob-1 {
-  width: 300px;
-  height: 300px;
-  top: -100px;
-  left: -100px;
-  background: rgba(0, 200, 83, 0.15);
-}
-
-.blob-2 {
-  width: 400px;
-  height: 400px;
-  bottom: -150px;
-  right: -100px;
-  background: rgba(0, 168, 68, 0.1);
-  animation-delay: -5s;
-}
-
-.blob-3 {
-  width: 250px;
-  height: 250px;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background: rgba(0, 200, 83, 0.08);
-  animation-delay: -10s;
-}
-
-@keyframes blobFloat {
-  0% { transform: translate(0, 0) scale(1); }
-  33% { transform: translate(30px, -50px) scale(1.1); }
-  66% { transform: translate(-20px, 20px) scale(0.9); }
-  100% { transform: translate(0, 0) scale(1); }
+#preloader.hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
 }
 
 .preloader-mesh {
   position: absolute;
   inset: 0;
-  background-image: radial-gradient(rgba(255,255,255,0.03) 1px, transparent 1px);
-  background-size: 40px 40px;
-  z-index: 2;
-  opacity: 0.5;
+  background-image:
+    linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.02) 1px, transparent 1px);
+  background-size: 60px 60px;
+  animation: meshDrift 20s linear infinite;
+}
+
+@keyframes meshDrift {
+  from { background-position: 0 0; }
+  to { background-position: 60px 60px; }
+}
+
+.preloader-blobs {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.blob {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  opacity: 0.15;
+}
+
+.blob-1 {
+  width: 400px;
+  height: 400px;
+  background: #00C853;
+  top: -10%;
+  right: -5%;
+  animation: blobFloat1 8s ease-in-out infinite;
+}
+
+.blob-2 {
+  width: 300px;
+  height: 300px;
+  background: #00A844;
+  bottom: -10%;
+  left: -5%;
+  animation: blobFloat2 10s ease-in-out infinite;
+}
+
+.blob-3 {
+  width: 250px;
+  height: 250px;
+  background: #00C853;
+  top: 40%;
+  left: 40%;
+  animation: blobFloat3 12s ease-in-out infinite;
+}
+
+@keyframes blobFloat1 {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(-30px, 20px) scale(1.1); }
+}
+
+@keyframes blobFloat2 {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(20px, -30px) scale(1.15); }
+}
+
+@keyframes blobFloat3 {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(-20px, -20px) scale(0.9); }
 }
 
 .preloader-content {
   position: relative;
-  z-index: 10;
+  z-index: 2;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 40px;
+  gap: 24px;
 }
 
 .preloader-visual {
   position: relative;
-  width: 220px;
-  height: 220px;
+  width: 140px;
+  height: 140px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -99,44 +119,36 @@
 
 .circle-bg {
   fill: none;
-  stroke: rgba(255, 255, 255, 0.05);
+  stroke: rgba(255, 255, 255, 0.06);
   stroke-width: 2;
 }
 
 .circle-fill {
   fill: none;
-  stroke: var(--clr-primary);
-  stroke-width: 2;
+  stroke: #00C853;
+  stroke-width: 2.5;
   stroke-linecap: round;
-  stroke-dasharray: 301.6; /* 2 * PI * 48 */
-  stroke-dashoffset: 301.6;
+  stroke-dasharray: 301.59;
+  stroke-dashoffset: 301.59;
   transition: stroke-dashoffset 0.1s linear;
-  filter: drop-shadow(0 0 8px var(--clr-primary-glow));
 }
 
 .preloader-logo {
-  width: 140px;
-  height: 140px;
-  background: rgba(255, 255, 255, 0.03);
-  backdrop-filter: blur(10px);
+  width: 80px;
+  height: 80px;
   border-radius: 50%;
+  overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 1px solid rgba(255, 255, 255, 0.05);
-  box-shadow: inset 0 0 20px rgba(255, 255, 255, 0.02);
-  animation: logoPulse 3s infinite ease-in-out;
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.08);
 }
 
 .preloader-logo img {
-  width: 70%;
-  height: auto;
-  filter: brightness(1.2);
-}
-
-@keyframes logoPulse {
-  0%, 100% { transform: scale(1); opacity: 1; }
-  50% { transform: scale(1.05); opacity: 0.9; }
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
 }
 
 .preloader-text-wrap {
@@ -144,64 +156,17 @@
 }
 
 .preloader-tagline {
-  font-family: var(--font-body);
+  color: rgba(255, 255, 255, 0.5);
   font-size: 0.85rem;
   font-weight: 500;
-  letter-spacing: 0.4em;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: rgba(255, 255, 255, 0.4);
-  margin-bottom: 12px;
+  margin-bottom: 8px;
 }
 
 .preloader-percentage {
-  font-family: var(--font-heading);
-  font-size: 1.5rem;
+  font-family: 'Outfit', sans-serif;
+  font-size: 1.4rem;
   font-weight: 700;
-  color: #fff;
-  letter-spacing: 0.1em;
-}
-
-/* Exit Animation */
-#preloader.preloader-done {
-  opacity: 0;
-  visibility: hidden;
-  pointer-events: none;
-}
-
-#preloader.preloader-done .preloader-content {
-  transform: scale(1.1);
-  filter: blur(10px);
-  transition: transform 0.8s ease, filter 0.8s ease;
-}
-
-/* Content reveal after preloader exits */
-body.preloader-active {
-  overflow: hidden;
-}
-
-body:not(.preloader-active) main,
-body:not(.preloader-active) header,
-body:not(.preloader-active) footer {
-  animation: pageReveal 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
-}
-
-@keyframes pageReveal {
-  from { opacity: 0; filter: blur(10px); transform: scale(1.02); }
-  to { opacity: 1; filter: blur(0); transform: scale(1); }
-}
-
-/* RESPONSIVE */
-@media (max-width: 768px) {
-  .preloader-visual {
-    width: 180px;
-    height: 180px;
-  }
-  .preloader-logo {
-    width: 110px;
-    height: 110px;
-  }
-  .preloader-tagline {
-    font-size: 0.7rem;
-    letter-spacing: 0.3em;
-  }
+  color: #00C853;
 }
