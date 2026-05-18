@@ -31,17 +31,18 @@
         <img src="assets/logo.png" alt="KRITA" class="logo-icon" >
       </a>
       <nav class="nav-menu" id="navMenu">
+        <button class="nav-close" id="navClose" aria-label="Close menu">&times;</button>
         <a href="index.html" class="nav-link">Home</a>
-        <a href="about.html" class="nav-link">About</a>
-        <a href="why-krita.html" class="nav-link">Why Krita</a>
-        <a href="services.html" class="nav-link">Services</a>
+        <a href="services.html" class="nav-link">Services & Solutions</a>
         <a href="projects.html" class="nav-link">Projects</a>
-        <a href="team.html" class="nav-link">Team</a>
+        <a href="about.html" class="nav-link">About Us</a>
+        <a href="team.html" class="nav-link">Leadership</a>
         <a href="contact.html" class="nav-link active">Contact</a>
+        <div class="header-cta desktop-header-cta" style="display: flex; align-items: center; gap: 1.5rem; margin-left: 1rem;">
+          <a href="contact.html#careers" class="nav-link" style="padding: 0;">Careers</a>
+          <a href="contact.html" class="btn btn-primary">Request a Brief</a>
+        </div>
       </nav>
-      <div class="header-cta">
-        <a href="contact.html" class="btn btn-primary">Get in Touch</a>
-      </div>
       <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle navigation">
         <span></span><span></span><span></span>
       </button>
@@ -54,7 +55,7 @@
       <div class="page-hero-curved-bg"></div>
       <div class="container page-hero-container reveal">
         <span class="hero-badge">Get in Touch</span>
-        <h1 class="hero-title">Let's build your<br><span class="text-primary" style="background: linear-gradient(135deg, var(--clr-primary), var(--clr-primary-dark)); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">clean energy future.</span></h1>
+        <h1 class="hero-title">Let's build your<br><span>clean energy future.</span></h1>
         <p class="hero-sub">We specialize in utility-scale and industrial renewable energy infrastructure.</p>
       </div>
     </section>
@@ -139,7 +140,23 @@
       </div>
     </section>
 
-    <!-- ===== FAQ SECTION ===== -->
+    <!-- ===== CAREERS SECTION ===== -->
+    <section class="section-padding" id="careers" style="border-top: 1px solid var(--clr-border); background: var(--clr-white);">
+      <div class="container">
+        <div style="background: var(--clr-surface); border: 1px solid var(--clr-border); border-radius: var(--radius-xl); padding: var(--sp-12); display: grid; grid-template-columns: 1.2fr 0.8fr; gap: var(--sp-10); align-items: center; box-shadow: var(--shadow-sm);">
+          <div>
+            <span style="font-size: 0.85rem; text-transform: uppercase; font-weight: 700; color: var(--clr-primary); letter-spacing: 1.5px; margin-bottom: 0.5rem; display: block;">Careers at Krita</span>
+            <h2 style="font-size: 2.2rem; font-weight: 800; color: var(--clr-secondary); margin-bottom: 1rem;">Shape the future of energy.</h2>
+            <p style="color: var(--clr-text-muted); font-size: 1.05rem; line-height: 1.8; margin-bottom: 0;">We are always looking for passionate engineers, system integrators, project managers, and finance experts to join our team in Chennai. If you are driven by engineering excellence and sustainable impact, we want to hear from you.</p>
+          </div>
+          <div style="background: rgba(0, 192, 165, 0.05); padding: var(--sp-8); border-radius: var(--radius-lg); border-left: 4px solid var(--clr-primary);">
+            <h4 style="margin-bottom: 0.5rem; font-size: 1.1rem; font-weight: 700; color: var(--clr-secondary);">How to Apply</h4>
+            <p style="color: var(--clr-text-muted); font-size: 0.95rem; line-height: 1.6; margin-bottom: 1rem;">Send your resume along with a cover brief outlining your core competencies.</p>
+            <a href="mailto:info@kritarenewables.com?subject=Career Inquiry — Krita Renewables" class="btn btn-primary" style="width: 100%; text-align: center; display: block;">Email Your CV</a>
+          </div>
+        </div>
+      </div>
+    </section>
     <section class="section-padding bg-surface">
       <div class="container">
         <div class="section-header text-center reveal">

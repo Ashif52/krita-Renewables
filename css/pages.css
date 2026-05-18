@@ -271,7 +271,7 @@
   left: 50%;
   transform: translateX(-50%);
   width: 150%;
-  height: 480px;
+  height: 540px;
   background: var(--grad-cordia);
   /* Concave curve clip path - sweeps upward at left/right edges, dips in center */
   clip-path: ellipse(70% 65% at 50% 35%);

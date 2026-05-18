@@ -30,17 +30,18 @@
         <img src="assets/logo.png" alt="KRITA" class="logo-icon" >
       </a>
       <nav class="nav-menu" id="navMenu">
+        <button class="nav-close" id="navClose" aria-label="Close menu">&times;</button>
         <a href="index.html" class="nav-link">Home</a>
-        <a href="about.html" class="nav-link">About</a>
-        <a href="why-krita.html" class="nav-link">Why Krita</a>
-        <a href="services.html" class="nav-link active">Services</a>
+        <a href="services.html" class="nav-link active">Services & Solutions</a>
         <a href="projects.html" class="nav-link">Projects</a>
-        <a href="team.html" class="nav-link">Team</a>
+        <a href="about.html" class="nav-link">About Us</a>
+        <a href="team.html" class="nav-link">Leadership</a>
         <a href="contact.html" class="nav-link">Contact</a>
+        <div class="header-cta desktop-header-cta" style="display: flex; align-items: center; gap: 1.5rem; margin-left: 1rem;">
+          <a href="contact.html#careers" class="nav-link" style="padding: 0;">Careers</a>
+          <a href="contact.html" class="btn btn-primary">Request a Brief</a>
+        </div>
       </nav>
-      <div class="header-cta">
-        <a href="contact.html" class="btn btn-primary">Get in Touch</a>
-      </div>
       <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle navigation">
         <span></span><span></span><span></span>
       </button>
@@ -52,164 +53,104 @@
     <section class="page-hero">
       <div class="page-hero-curved-bg"></div>
       <div class="container page-hero-container reveal">
-        <span class="hero-badge">What We Do</span>
-        <h1 class="hero-title">Four areas of renewable focus</h1>
-        <p class="hero-sub">Krita works exclusively with industrial facilities, large commercial establishments, and institutional clients across India.</p>
+        <span class="hero-badge">Services & Solutions</span>
+        <h1 class="hero-title" style="font-size: clamp(2.2rem, 5vw, 3.8rem); font-weight: 800;">Integrated solutions — multi‑asset, single partner</h1>
+        <p class="hero-sub" style="font-size: 1.15rem; max-width: 800px; margin: 0 auto; line-height: 1.8;">We design and deliver multi‑asset energy systems that work together: solar PV, wind, biomass, and IPP solutions including battery energy storage and grid‑synchronization. Each service is delivered as part of a cohesive energy ecosystem.</p>
       </div>
     </section>
     
-    <!-- ===== CAPABILITIES SECTION ===== -->
+    <!-- ===== SERVICES FEATURE SHOWCASE ===== -->
     <section class="section-padding bg-surface">
       <div class="container">
-        <div class="section-header reveal text-center" style="max-width: 800px; margin: 0 auto var(--sp-12);">
-          <span class="section-label mx-auto">Core Capabilities</span>
-          <h2 class="section-title capabilities-title">Engineering Excellence in Clean Energy</h2>
-          <p class="section-desc mt-3">Our technical expertise spans across multiple renewable energy verticals, delivering high-performance infrastructure for industrial scale.</p>
-        </div>
-        
-        <div class="benefits-grid">
-          <!-- Solar -->
-          <div class="benefit-card reveal">
-            <div class="benefit-img-wrap">
-              <img src="assets/images/Ground Mount Solar Projects.jpg" alt="Ground Mount Solar">
-              <div class="benefit-icon-badge">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="M4.93 4.93l1.41 1.41"/><path d="M17.66 17.66l1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="M6.34 17.66l-1.41 1.41"/><path d="M19.07 4.93l-1.41 1.41"/></svg>
-              </div>
-            </div>
-            <div class="benefit-content">
-              <h4>Ground Mount Solar Projects</h4>
-              <ul class="benefit-points">
-                <li>Large-scale industrial installations</li>
-                <li>Optimized for maximum ROI</li>
-                <li>High-efficiency energy generation</li>
-                <li>Turnkey EPC delivery & management</li>
-              </ul>
-            </div>
-          </div>
-
-          <!-- Wind -->
-          <div class="benefit-card reveal reveal-delay-1">
-            <div class="benefit-img-wrap">
-              <img src="assets/images/Wind Energy Solutions.jpg" alt="Wind Energy">
-              <div class="benefit-icon-badge">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9.59 4.59A2 2 0 1 1 11 8H2"/><path d="M12.59 19.41A2 2 0 1 0 14 16H2"/><path d="M15.73 8.27A2.5 2.5 0 1 1 19.5 12H2"/></svg>
-              </div>
-            </div>
-            <div class="benefit-content">
-              <h4>Wind Energy Solutions</h4>
-              <ul class="benefit-points">
-                <li>Efficient turbine technology</li>
-                <li>Strategic site engineering</li>
-                <li>Industrial-scale power generation</li>
-                <li>Long-term operational reliability</li>
-              </ul>
-            </div>
-          </div>
-
-          <!-- Biomass -->
-          <div class="benefit-card reveal reveal-delay-2">
-            <div class="benefit-img-wrap">
-              <img src="assets/images/Biomass Energy Projects.jpg" alt="Biomass Energy">
-              <div class="benefit-icon-badge">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8a8 8 0 0 1-10 10Z"/><path d="M19 21c-2-3-1-6-1-6"/></svg>
-              </div>
-            </div>
-            <div class="benefit-content">
-              <h4>Biomass Energy Projects</h4>
-              <ul class="benefit-points">
-                <li>Waste-to-energy conversion</li>
-                <li>Sustainable base-load power</li>
-                <li>Circular economy integration</li>
-                <li>Valuable renewable energy source</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ===== SERVICES LIST ===== -->
-    <section class="section-padding">
-       <div class="container">
-        
-        <!--<div class="mb-12 text-center" style="max-width: 800px; margin-left: auto; margin-right: auto; padding-bottom: 2rem; border-bottom: 1px solid var(--clr-border);">
-           <p class="text-muted" style="font-size: 0.95rem; line-height: 1.8;"><strong>Note on capability scope:</strong> Services marked <em>"In development"</em> reflect areas where our team holds established expertise and active development is underway — including identified technology partners, design consultants, and probable manufacturing locations.</p>
-        </div>
-
-        <div class="services-list" style="display: grid; gap: 4rem;"> -->
+        <div class="services-list" style="display: grid; gap: 6rem; margin-top: 2rem;">
           
-          <!-- Solar EPC -->
+          <!-- 1. Solar PV -->
           <div class="service-feature-row reveal" id="solar">
-            <div class="service-img">
-              <img src="assets/images/hero-solar.png" alt="Solar EPC">
+            <div class="service-img" style="border-radius: var(--radius-lg); overflow: hidden; border: 1px solid var(--clr-border); box-shadow: var(--shadow-md);">
+              <img src="assets/images/Ground Mount Solar Projects.jpg" alt="Ground-Mount / Rooftop Solar PV" style="width: 100%; height: 100%; object-fit: cover;">
             </div>
-            <div class="service-info">
-              <div class="status-badge active">ACTIVE</div>
-              <h2>Solar EPC</h2>
-              <p>End-to-end EPC for large-scale ground-mounted and industrial rooftop solar projects.</p>
-              <ul class="svc-features">
-                <li>Identification of potential sites and validation of grid availability</li>
-                <li>Land acquisition and infrastructure development including transmission lines</li>
-                <li>Design engineering, procurement, and project execution</li>
-                <li>Commissioning with SEB approvals</li>
-                <li>Long-term Operation & Maintenance service</li>
-              </ul>
-              <a href="contact.html" class="btn btn-outline-dark">Consult Our Engineers</a>
+            <div class="service-info" style="display: flex; flex-direction: column; justify-content: center;">
+              <span style="font-size: 0.85rem; text-transform: uppercase; font-weight: 700; color: var(--clr-primary); letter-spacing: 1.5px; margin-bottom: 0.5rem; display: block;">Vertical 01</span>
+              <h2 style="font-size: 2rem; font-weight: 800; color: var(--clr-secondary); margin-bottom: 1.2rem;">Ground‑Mount / Rooftop Solar</h2>
+              <p style="color: var(--clr-text-muted); font-size: 1rem; line-height: 1.8; margin-bottom: 1.5rem;">Turnkey ground‑mount systems for industrial parks and large campuses — optimized layout, civil design, and high‑yield module selection. We provide complete solar EPC from site integration to regulatory approvals.</p>
+              <div style="background: rgba(0,192,165,0.06); padding: 1rem 1.5rem; border-radius: var(--radius-md); border-left: 4px solid var(--clr-primary); color: var(--clr-secondary); font-weight: 600; font-size: 0.95rem;">
+                Business outcome: Maximize yield per acre; shorten payback through optimized BOS & O&M.
+              </div>
             </div>
           </div>
 
-          <!-- Battery Management -->
-          <div class="service-feature-row reveal reverse reveal-delay-1" id="battery">
-            <div class="service-info">
-              <div class="status-badge">IN DEVELOPMENT</div>
-              <h2>Battery Management Solutions</h2>
-              <p>Industrial-scale battery storage for wind, solar, green hydrogen, and EV segments.</p>
-              <ul class="svc-features">
-                <li>Manufacturing facility planned near Chennai for assembly of Hub, Nacelle, and Blades</li>
-                <li>Strategic joint ventures and technology transfers for high-efficiency storage solutions</li>
-                <li>Catering to Solar, Wind, Green Hydrogen, and EV segments</li>
-                <li>Targeting Top 5 position in the Indian segment by the fifth year</li>
-              </ul>
+          <!-- 2. Wind Energy -->
+          <div class="service-feature-row reveal reverse" id="wind" style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center;">
+            <div class="service-info" style="display: flex; flex-direction: column; justify-content: center;">
+              <span style="font-size: 0.85rem; text-transform: uppercase; font-weight: 700; color: var(--clr-primary); letter-spacing: 1.5px; margin-bottom: 0.5rem; display: block;">Vertical 02</span>
+              <h2 style="font-size: 2rem; font-weight: 800; color: var(--clr-secondary); margin-bottom: 1.2rem;">Wind Energy</h2>
+              <p style="color: var(--clr-text-muted); font-size: 1rem; line-height: 1.8; margin-bottom: 1.5rem;">Site assessment, turbine selection, grid interconnection and long‑term operations for hybrid or standalone wind projects. Repowering solutions for legacy wind installations to maximize capacity factors.</p>
+              <div style="background: rgba(0,192,165,0.06); padding: 1rem 1.5rem; border-radius: var(--radius-md); border-left: 4px solid var(--clr-primary); color: var(--clr-secondary); font-weight: 600; font-size: 0.95rem;">
+                Business outcome: Diversify generation mix and improve capacity factor across seasons.
+              </div>
             </div>
-            <div class="service-img">
-              <img src="assets/images/Battery Management Solutions.jpg" alt="Battery Management">
+            <div class="service-img" style="border-radius: var(--radius-lg); overflow: hidden; border: 1px solid var(--clr-border); box-shadow: var(--shadow-md);">
+              <img src="assets/images/Wind Energy Solutions.jpg" alt="Wind Energy Solutions" style="width: 100%; height: 100%; object-fit: cover;">
             </div>
           </div>
 
-          <!-- Wind Turbines -->
-          <div class="service-feature-row reveal reveal-delay-2" id="wind">
-            <div class="service-img">
-              <img src="assets/images/Wind Turbine Generators.jpg" alt="Wind Turbine Generators">
+          <!-- 3. Biomass Energy -->
+          <div class="service-feature-row reveal" id="biomass">
+            <div class="service-img" style="border-radius: var(--radius-lg); overflow: hidden; border: 1px solid var(--clr-border); box-shadow: var(--shadow-md);">
+              <img src="assets/images/Biomass Energy Projects.jpg" alt="Biomass Energy Projects" style="width: 100%; height: 100%; object-fit: cover;">
             </div>
-            <div class="service-info">
-              <div class="status-badge">IN DEVELOPMENT</div>
-              <h2>Wind Energy Solutions</h2>
-              <p>End-to-end wind energy services from site identification to long-term operations for large-scale industrial deployment.</p>
-              <ul class="svc-features">
-                <li>Development of highly efficient 1 MW and 1.86 MW Wind Turbine Generators (WTG) for the repowering market</li>
-                <li>Upcoming 6 MW Wind Turbine for the IPP market by the fifth year</li>
-                <li>Export-ready technology targeting African, Middle-East, and SE Asian markets</li>
-                <li>Site identification, grid validation, and land acquisition for multi-MW wind farms</li>
-                <li>Wind turbine erection, commissioning, and long-term O&M services</li>
-                <li>Active power trading for industrial clients</li>
-              </ul>
+            <div class="service-info" style="display: flex; flex-direction: column; justify-content: center;">
+              <span style="font-size: 0.85rem; text-transform: uppercase; font-weight: 700; color: var(--clr-primary); letter-spacing: 1.5px; margin-bottom: 0.5rem; display: block;">Vertical 03</span>
+              <h2 style="font-size: 2rem; font-weight: 800; color: var(--clr-secondary); margin-bottom: 1.2rem;">Biomass Energy</h2>
+              <p style="color: var(--clr-text-muted); font-size: 1rem; line-height: 1.8; margin-bottom: 1.5rem;">Design and build of biomass CHP and steam systems for industrial heat and power needs, with fuel‑supply integration. Our team holds extensive experience established over 35 MW of built and operated biomass plants.</p>
+              <div style="background: rgba(0,192,165,0.06); padding: 1rem 1.5rem; border-radius: var(--radius-md); border-left: 4px solid var(--clr-primary); color: var(--clr-secondary); font-weight: 600; font-size: 0.95rem;">
+                Business outcome: Convert waste streams into reliable baseload power and reduce fossil fuel spend.
+              </div>
             </div>
           </div>
 
-          <!-- IPP Ownership -->
-          <div class="service-feature-row reveal reveal-delay-3" id="ipp">
-            <div class="service-info">
-              <div class="status-badge">IN DEVELOPMENT</div>
-              <h2>Solar & Wind IPP Ownership</h2>
-              <p>Development and ownership of solar and wind IPP projects through structured SPVs, targeting 700 MW cumulative ownership.</p>
-              <ul class="svc-features">
-                <li>Green energy generated is sold directly to reputed industrial corporates</li>
-                <li>Targeting cumulative ownership of approximately 700 MW by end of year five</li>
-                <li>Biomass-based renewable energy is also within scope</li>
-              </ul>
+          <!-- 4. IPP Ownership -->
+          <div class="service-feature-row reveal reverse" id="ipp" style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center;">
+            <div class="service-info" style="display: flex; flex-direction: column; justify-content: center;">
+              <span style="font-size: 0.85rem; text-transform: uppercase; font-weight: 700; color: var(--clr-primary); letter-spacing: 1.5px; margin-bottom: 0.5rem; display: block;">Vertical 04</span>
+              <h2 style="font-size: 2rem; font-weight: 800; color: var(--clr-secondary); margin-bottom: 1.2rem;">IPP & Multi‑Asset Ownership Models</h2>
+              <p style="color: var(--clr-text-muted); font-size: 1rem; line-height: 1.8; margin-bottom: 1.5rem;">Build‑own‑operate (BOO), EaaS, and hybrid financing to match balance‑sheet and tax objectives. Krita owns, operates, and maintains assets to deliver contracted clean energy services over a 25-year cycle.</p>
+              <div style="background: rgba(0,192,165,0.06); padding: 1rem 1.5rem; border-radius: var(--radius-md); border-left: 4px solid var(--clr-primary); color: var(--clr-secondary); font-weight: 600; font-size: 0.95rem;">
+                Business outcome: Access modern energy without upfront capital or with optimized balance‑sheet treatment.
+              </div>
             </div>
-            <div class="service-img">
-              <img src="assets/images/1000193394.jpg" alt="IPP Ownership">
+            <div class="service-img" style="border-radius: var(--radius-lg); overflow: hidden; border: 1px solid var(--clr-border); box-shadow: var(--shadow-md);">
+              <img src="assets/images/1000193394.jpg" alt="IPP and Multi-Asset Ownership" style="width: 100%; height: 100%; object-fit: cover;">
+            </div>
+          </div>
+
+          <!-- 5. BESS Storage -->
+          <div class="service-feature-row reveal" id="bess">
+            <div class="service-img" style="border-radius: var(--radius-lg); overflow: hidden; border: 1px solid var(--clr-border); box-shadow: var(--shadow-md);">
+              <img src="assets/images/Battery Management Solutions.jpg" alt="Battery Storage and Grid Integration" style="width: 100%; height: 100%; object-fit: cover;">
+            </div>
+            <div class="service-info" style="display: flex; flex-direction: column; justify-content: center;">
+              <span style="font-size: 0.85rem; text-transform: uppercase; font-weight: 700; color: var(--clr-primary); letter-spacing: 1.5px; margin-bottom: 0.5rem; display: block;">Vertical 05</span>
+              <h2 style="font-size: 2rem; font-weight: 800; color: var(--clr-secondary); margin-bottom: 1.2rem;">Battery Energy Storage & Grid Integration</h2>
+              <p style="color: var(--clr-text-muted); font-size: 1rem; line-height: 1.8; margin-bottom: 1.5rem;">BESS sizing, control logic, and DG/solar synchronization for demand charge management, black‑start capability, and grid services. Flawless control algorithms that protect industrial operational continuity.</p>
+              <div style="background: rgba(0,192,165,0.06); padding: 1rem 1.5rem; border-radius: var(--radius-md); border-left: 4px solid var(--clr-primary); color: var(--clr-secondary); font-weight: 600; font-size: 0.95rem;">
+                Business outcome: Reduce peak demand charges, enable time‑shifted energy use, and improve power quality.
+              </div>
+            </div>
+          </div>
+
+          <!-- 6. Operations & Performance -->
+          <div class="service-feature-row reveal reverse" id="operations" style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center;">
+            <div class="service-info" style="display: flex; flex-direction: column; justify-content: center;">
+              <span style="font-size: 0.85rem; text-transform: uppercase; font-weight: 700; color: var(--clr-primary); letter-spacing: 1.5px; margin-bottom: 0.5rem; display: block;">Vertical 06</span>
+              <h2 style="font-size: 2rem; font-weight: 800; color: var(--clr-secondary); margin-bottom: 1.2rem;">Operations & Performance Services</h2>
+              <p style="color: var(--clr-text-muted); font-size: 1rem; line-height: 1.8; margin-bottom: 1.5rem;">24/7 remote monitoring, predictive maintenance, performance guarantees, and lifecycle spare‑parts management. Our remote SCADA platform ties asset performance directly to operational SLAs.</p>
+              <div style="background: rgba(0,192,165,0.06); padding: 1rem 1.5rem; border-radius: var(--radius-md); border-left: 4px solid var(--clr-primary); color: var(--clr-secondary); font-weight: 600; font-size: 0.95rem;">
+                Business outcome: Sustained yield, lower operational downtime, and transparent performance reporting.
+              </div>
+            </div>
+            <div class="service-img" style="border-radius: var(--radius-lg); overflow: hidden; border: 1px solid var(--clr-border); box-shadow: var(--shadow-md);">
+              <img src="assets/images/cta-solar.png" alt="O&M and Performance Services" style="width: 100%; height: 100%; object-fit: cover;">
             </div>
           </div>
 

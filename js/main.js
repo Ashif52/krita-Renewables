@@ -23,6 +23,13 @@ document.addEventListener('DOMContentLoaded', () => {
                 nav.classList.remove('active');
             }
         });
+        const navClose = document.getElementById('navClose');
+        if (navClose) {
+            navClose.addEventListener('click', () => {
+                toggle.classList.remove('active');
+                nav.classList.remove('active');
+            });
+        }
         nav.querySelectorAll('.nav-link').forEach(link => {
             link.addEventListener('click', () => {
                 toggle.classList.remove('active');
