@@ -1,0 +1,184 @@
+/* ============================================================
+   about.css — KRITA Renewables
+   Recreated exactly from Cordia Energy Solar Ref Design
+   Asymmetric Grid, Premium Stat Cards with Hover Glow, 
+   generous padding for overlapping visual layering, and Why Us blocks.
+   ============================================================ */
+
+/* generous top padding to allow the hero photographic canopy card to overlap */
+.about-snippet {
+  padding-top: 300px;
+  background: var(--clr-surface);
+}
+
+.why-grid {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: var(--sp-16);
+  align-items: center;
+}
+
+.why-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-6);
+}
+
+.why-item {
+  display: flex;
+  gap: var(--sp-6);
+  align-items: flex-start;
+  padding: var(--sp-8);
+  border-radius: var(--radius-lg);
+  transition: all .3s var(--ease);
+  border: 1px solid transparent;
+}
+
+.why-item:hover {
+  background: var(--clr-white);
+  border-color: var(--clr-border);
+  box-shadow: var(--shadow-lg);
+}
+
+.why-item .icon-box {
+  flex-shrink: 0;
+  width: 56px;
+  height: 56px;
+  background: rgba(0, 192, 165, 0.1);
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--clr-primary);
+  font-size: 1.5rem;
+}
+
+.why-item h4 {
+  font-size: 1.4rem;
+  margin-bottom: var(--sp-3);
+  color: var(--clr-secondary);
+  font-weight: 700;
+}
+
+.why-item p {
+  font-size: 1.05rem;
+  color: var(--clr-text-muted);
+  line-height: 1.7;
+}
+
+/* Stat Cards styled cleanly as premium editorial metrics */
+.stat-card-custom {
+  background: #ffffff;
+  padding: 2.2rem 2rem;
+  border-radius: 16px;
+  border: 1px solid rgba(35, 18, 60, 0.05);
+  box-shadow: 0 10px 30px rgba(35, 18, 60, 0.03);
+  transition: all 0.4s var(--ease);
+}
+
+.stat-card-custom:hover {
+  transform: translateY(-5px);
+  border-color: var(--clr-primary);
+  box-shadow: 0 20px 40px rgba(35, 18, 60, 0.08);
+}
+
+.stat-card-custom h3 {
+  font-family: var(--font-heading);
+  font-size: 2.8rem;
+  color: var(--clr-primary);
+  font-weight: 800;
+  margin-bottom: 0.5rem;
+  letter-spacing: -0.02em;
+}
+
+.stat-card-custom p {
+  color: var(--clr-secondary);
+  font-weight: 600;
+  font-size: 0.9rem;
+  line-height: 1.4;
+  margin: 0;
+}
+
+/* Image panel with floating stat badge */
+.why-image {
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  position: relative;
+  box-shadow: var(--shadow-xl);
+}
+
+.why-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  min-height: 600px;
+}
+
+.why-image .stat-float {
+  position: absolute;
+  bottom: var(--sp-8);
+  left: var(--sp-8);
+  background: var(--clr-secondary);
+  backdrop-filter: blur(16px);
+  color: #fff;
+  padding: var(--sp-8) var(--sp-10);
+  border-radius: var(--radius-lg);
+  border: 1px solid rgba(255, 255, 255, .1);
+  box-shadow: var(--shadow-xl);
+}
+
+.why-image .stat-float .big {
+  font-family: var(--font-heading);
+  font-size: 2.8rem;
+  font-weight: 800;
+  color: var(--clr-primary);
+  line-height: 1;
+}
+
+.why-image .stat-float .small {
+  font-size: 1rem;
+  color: rgba(255, 255, 255, .7);
+  margin-top: var(--sp-2);
+  font-weight: 500;
+}
+
+/* Inline CTA banner */
+.inline-cta {
+  background: linear-gradient(135deg, var(--clr-secondary) 0%, var(--clr-secondary-light) 100%);
+  border-radius: var(--radius-xl);
+  padding: var(--sp-16) var(--sp-12);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--sp-10);
+  position: relative;
+  overflow: hidden;
+}
+
+.inline-cta::before {
+  content: '';
+  position: absolute;
+  top: -40%;
+  right: -10%;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, var(--clr-primary-glow), transparent 70%);
+  pointer-events: none;
+}
+
+.inline-cta h3 { font-size: 1.8rem; margin-bottom: var(--sp-3); }
+.inline-cta p  { color: rgba(255, 255, 255, .6); max-width: 500px; }
+
+/* Responsive tweaks */
+@media (max-width: 1024px) {
+  .about-snippet {
+    padding-top: 240px;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-snippet {
+    padding-top: 160px;
+  }
+}

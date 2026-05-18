@@ -13,9 +13,17 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/header.css?v=2.2">
+  <link rel="stylesheet" href="css/hero.css">
+  <link rel="stylesheet" href="css/about.css">
+  <link rel="stylesheet" href="css/services.css">
+  <link rel="stylesheet" href="css/projects.css">
+  <link rel="stylesheet" href="css/footer.css?v=2.4">
+  <link rel="stylesheet" href="css/pages.css">
   <link rel="stylesheet" href="css/preloader.css">
-  <link rel="stylesheet" href="css/responsive.css">
+  <link rel="stylesheet" href="css/responsive.css?v=2.2">
   <link rel="icon" type="image/png" href="assets/logo.png">
 </head>
 <body class="preloader-active">
@@ -78,9 +86,10 @@
   <main>
     <!-- ===== HERO ===== -->
     <section class="hero" id="hero">
-      <div class="container hero-split">
-        <div class="hero-content reveal">
-          <span class="section-label mb-4 d-inline-block" style="background:rgba(255,255,255,0.2); color:#fff;">CHENNAI, INDIA · RENEWABLE ENERGY</span>
+      <div class="hero-curved-bg"></div>
+      <div class="container hero-container">
+        <div class="hero-content reveal text-center">
+          <span class="hero-badge reveal">CHENNAI, INDIA · RENEWABLE ENERGY</span>
           <h1 class="hero-title reveal">Clean energy solutions for industrial India.</h1>
           <p class="hero-sub reveal reveal-delay-1">Engineering-led renewable energy company delivering solar EPC, battery storage, wind energy, and IPP solutions for large-scale industrial and commercial clients.</p>
           <div class="hero-actions reveal reveal-delay-2">
@@ -88,14 +97,14 @@
             <a href="services.html" class="btn btn-outline btn-lg js-scroll">Our services →</a>
           </div>
         </div>
-        <div class="hero-image reveal reveal-delay-1">
+        <div class="hero-image-wrap reveal reveal-delay-3">
           <img src="assets/images/hero-solar.png" alt="KRITA Industrial Solar Panel Installation" loading="eager">
         </div>
       </div>
     </section>
 
     <!-- ===== ABOUT SNIPPET ===== -->
-    <section class="section-padding bg-surface">
+    <section class="section-padding bg-surface about-snippet">
       <div class="container">
         <div class="responsive-grid-2">
           <div class="reveal">
@@ -210,7 +219,7 @@
             <div class="card-icon">
               <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
             </div>
-            <div style="background: rgba(0,200,83,0.1); color: var(--clr-primary); font-size: 0.75rem; font-weight: 700; padding: 4px 10px; border-radius: 20px; display: inline-block; margin-bottom: 12px;">ACTIVE</div>
+            <div class="status-badge active">ACTIVE</div>
             <h3 class="card-title">Solar EPC</h3>
             <p class="card-text">End-to-end EPC for large-scale ground-mounted and industrial rooftop solar — from site assessment through commissioning and O&M.</p>
           </div>
@@ -218,7 +227,7 @@
             <div class="card-icon">
               <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="6" width="20" height="12" rx="2"/><path d="M22 10H2"/><path d="M6 14h.01"/><path d="M10 14h.01"/></svg>
             </div>
-            <div style="background: rgba(0,0,0,0.05); color: var(--clr-text-muted); font-size: 0.75rem; font-weight: 700; padding: 4px 10px; border-radius: 20px; display: inline-block; margin-bottom: 12px;">IN DEVELOPMENT</div>
+            <div class="status-badge">IN DEVELOPMENT</div>
             <h3 class="card-title">Battery Management</h3>
             <p class="card-text">Industrial-scale battery storage for wind, solar, green hydrogen, and EV segments — with JV manufacturing planned near Chennai.</p>
           </div>
@@ -226,7 +235,7 @@
             <div class="card-icon">
               <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9.59 4.59A2 2 0 1 1 11 8H2m10.59 11.41A2 2 0 1 0 14 16H2m15.73-8.27A2.5 2.5 0 1 1 19.5 12H2"/></svg>
             </div>
-            <div style="background: rgba(0,0,0,0.05); color: var(--clr-text-muted); font-size: 0.75rem; font-weight: 700; padding: 4px 10px; border-radius: 20px; display: inline-block; margin-bottom: 12px;">IN DEVELOPMENT</div>
+            <div class="status-badge">IN DEVELOPMENT</div>
             <h3 class="card-title">Wind Turbine Generators</h3>
             <p class="card-text">High-efficiency WTGs from 1 MW repowering units to 6 MW turbines for large-scale IPP deployment.</p>
           </div>
@@ -234,7 +243,7 @@
             <div class="card-icon">
               <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>
             </div>
-            <div style="background: rgba(0,0,0,0.05); color: var(--clr-text-muted); font-size: 0.75rem; font-weight: 700; padding: 4px 10px; border-radius: 20px; display: inline-block; margin-bottom: 12px;">IN DEVELOPMENT</div>
+            <div class="status-badge">IN DEVELOPMENT</div>
             <h3 class="card-title">Solar & Wind IPP Ownership</h3>
             <p class="card-text">Independent power producer projects through structured SPVs — targeting 700 MW cumulative ownership with direct green energy sales to industrial corporates.</p>
           </div>

@@ -155,15 +155,17 @@
   /* Header / Nav */
   .header {
     top: 8px;
+    left: 3%;
+    right: 3%;
     width: 94%;
     padding: var(--sp-1) var(--sp-4);
     border-radius: 16px;
   }
   .logo-icon {
-    height: 100px;
+    height: 50px;
   }
   .header.scrolled .logo-icon {
-    height: 70px;
+    height: 42px;
   }
   .nav-menu {
     position: fixed;

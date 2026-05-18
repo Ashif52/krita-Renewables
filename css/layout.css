@@ -1,0 +1,12 @@
+/* ============================================================
+   layout.css — KRITA Renewables
+   Asymmetric grid helpers — Cordia-level editorial rhythm
+   ============================================================ */
+
+/* Asymmetric grids for alternating section compositions */
+.grid-asym-left  { display: grid; gap: var(--sp-10); grid-template-columns: 2fr 1fr; align-items: center; }
+.grid-asym-right { display: grid; gap: var(--sp-10); grid-template-columns: 1fr 2fr; align-items: center; }
+
+/* Utility mobile-visibility helpers */
+.d-none-mobile  { /* hidden on mobile — set in responsive.css */ }
+.d-block-mobile { display: none; } /* shown only on mobile */

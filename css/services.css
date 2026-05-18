@@ -1,0 +1,178 @@
+/* ============================================================
+   services.css — KRITA Renewables
+   Bento-style service cards: uneven 2-col grid, left wider
+   ============================================================ */
+
+/* Uneven 2-col grid: breaks equal-box template pattern */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--sp-6);
+}
+
+.service-card {
+  background: var(--clr-white);
+  padding: var(--sp-10);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--clr-border);
+  transition: all .4s var(--ease);
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+/* Sliding accent border matches Cordia Lime/Teal */
+.service-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: var(--grad-cordia);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform .4s var(--ease);
+}
+
+.service-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-xl);
+  border-color: rgba(35, 18, 60, 0.05);
+}
+
+.service-card:hover::before { transform: scaleX(1); }
+
+.card-icon {
+  width: 56px;
+  height: 56px;
+  background: rgba(0, 192, 165, 0.08);
+  color: var(--clr-primary);
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: var(--sp-6);
+  transition: all 0.3s var(--ease);
+}
+
+.service-card:hover .card-icon {
+  background: var(--clr-primary);
+  color: #ffffff;
+}
+
+.card-title {
+  font-size: 1.35rem;
+  color: var(--clr-secondary);
+  font-weight: 700;
+  margin-bottom: var(--sp-3);
+}
+
+.card-text {
+  color: var(--clr-text-muted);
+  margin-bottom: var(--sp-6);
+  font-size: .95rem;
+  line-height: 1.7;
+  flex-grow: 1;
+}
+
+.card-link {
+  color: var(--clr-primary);
+  font-weight: 600;
+  font-size: .9rem;
+  display: inline-flex;
+  align-items: center;
+  gap: var(--sp-2);
+}
+.card-link:hover { gap: var(--sp-3); }
+
+/* Status badges (ACTIVE / IN DEVELOPMENT) */
+.status-badge {
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 6px 14px;
+  border-radius: 20px;
+  display: inline-block;
+  margin-bottom: 16px;
+  align-self: flex-start;
+  background: rgba(35, 18, 60, 0.05);
+  color: var(--clr-text-muted);
+}
+.status-badge.active {
+  background: rgba(0, 192, 165, 0.1);
+  color: var(--clr-primary);
+}
+
+/* Service feature rows (services page alternating layout) */
+.service-feature-row {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 3rem;
+  align-items: center;
+  margin-top: 4rem;
+}
+.service-feature-row.reverse { grid-template-columns: 1.2fr 1fr; }
+.service-feature-row.reverse .service-info { order: 1; }
+.service-feature-row.reverse .service-img  { order: 2; }
+
+.service-feature-row h2 {
+  font-size: 2.2rem;
+  margin-bottom: 1rem;
+  color: var(--clr-secondary);
+}
+.service-feature-row p {
+  color: var(--clr-text-muted);
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
+  font-size: 1.05rem;
+}
+
+.service-img {
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+}
+.service-img img { width: 100%; height: auto; display: block; }
+
+/* Process steps (4-col staggered) */
+.process-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--sp-6);
+  counter-reset: step;
+}
+
+.process-step:nth-child(2) { margin-top: 20px; }
+.process-step:nth-child(3) { margin-top: 10px; }
+.process-step:nth-child(4) { margin-top: 30px; }
+
+.process-step {
+  counter-increment: step;
+  position: relative;
+  padding: var(--sp-8) var(--sp-6);
+  background: var(--clr-white);
+  border: 1px solid var(--clr-border);
+  border-radius: var(--radius-lg);
+  transition: all .3s var(--ease);
+}
+
+.process-step:hover {
+  border-color: var(--clr-primary);
+  box-shadow: var(--shadow-md);
+}
+
+.process-step::before {
+  content: counter(step, decimal-leading-zero);
+  font-family: var(--font-heading);
+  font-size: 3rem;
+  font-weight: 800;
+  color: rgba(0, 192, 165, .1);
+  line-height: 1;
+  display: block;
+  margin-bottom: var(--sp-4);
+}
+
+.process-step h4 { font-size: 1.1rem; margin-bottom: var(--sp-3); }
+.process-step p  { font-size: .9rem; color: var(--clr-text-muted); line-height: 1.6; }

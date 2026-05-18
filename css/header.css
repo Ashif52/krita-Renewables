@@ -1,0 +1,120 @@
+/* ============================================================
+   header.css — KRITA Renewables
+   Premium sticky nav: float pill → solid on scroll
+   ============================================================ */
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  z-index: 200;
+  padding: 0 var(--sp-8);
+  background: #ffffff;
+  border-bottom: 1px solid rgba(35, 18, 60, 0.08);
+  transition: all .4s var(--ease);
+  height: 115px;
+  display: flex;
+  align-items: center;
+}
+
+.header.scrolled {
+  height: 90px;
+  box-shadow: 0 4px 20px rgba(35, 18, 60, 0.05);
+  background: rgba(255, 255, 255, 0.96);
+  backdrop-filter: blur(10px);
+}
+
+/* Nav container */
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+/* Logo — crisp fit to look institutional-grade and polished */
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: auto;
+}
+
+.logo-icon {
+  width: auto;
+  height: 200px;
+  max-width: 350px;
+  object-fit: contain;
+  transition: all 0.3s var(--ease);
+  image-rendering: -webkit-optimize-contrast;
+}
+
+.header.scrolled .logo-icon { height: 75px; }
+.logo:hover .logo-icon { transform: scale(1.02); }
+.header.scrolled .logo { color: var(--clr-secondary); }
+
+/* Nav links — centered perfectly in the container using margin: 0 auto; */
+.nav-menu {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-8);
+  margin: 0 auto;
+}
+
+.nav-link {
+  color: var(--clr-secondary);
+  font-weight: 600;
+  font-size: .9rem;
+  letter-spacing: .01em;
+  position: relative;
+  padding: 4px 0;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -2px;
+  left: 0;
+  background: var(--clr-primary);
+  border-radius: 2px;
+  transition: width .3s var(--ease);
+}
+
+.nav-link:hover,
+.nav-link.active { color: var(--clr-primary); }
+
+.nav-link:hover::after,
+.nav-link.active::after { width: 100%; }
+
+/* CTA button area */
+.header-cta {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: var(--sp-4);
+}
+
+/* Mobile toggle */
+.mobile-toggle {
+  display: none;
+  background: none;
+  border: none;
+  flex-direction: column;
+  gap: 5px;
+  padding: 4px;
+}
+
+.mobile-toggle span {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background: var(--clr-secondary);
+  border-radius: 2px;
+  transition: all .3s var(--ease);
+}
