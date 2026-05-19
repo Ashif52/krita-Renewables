@@ -280,14 +280,29 @@ html, body {
   [style*="minmax(380px"] {
     grid-template-columns: 1fr !important;
   }
+  [style*="minmax(320px"] {
+    grid-template-columns: 1fr !important;
+  }
   [style*="minmax(300px"] {
     grid-template-columns: 1fr !important;
   }
   [style*="minmax(280px"] {
-    grid-template-columns: 1fr 1fr !important;
+    grid-template-columns: 1fr !important;
   }
   [style*="minmax(240px"] {
     grid-template-columns: 1fr 1fr !important;
+  }
+
+  /* Stack hero CTA buttons vertically */
+  .hero-actions,
+  [style*="display: flex"][style*="gap: 1rem"][style*="flex-wrap: wrap"] {
+    flex-direction: column !important;
+    align-items: stretch !important;
+  }
+  .hero-actions .btn,
+  .hero-actions a {
+    width: 100% !important;
+    text-align: center !important;
   }
 
   /* Prevent nowrap titles from overflowing */
