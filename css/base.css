@@ -6,9 +6,9 @@
 /* ===== DESIGN TOKENS ===== */
 :root {
   /* Brand Colors */
-  --clr-primary: #10B981; /* Premium Emerald/Forest Green from logo */
-  --clr-primary-dark: #047857; /* Deep Forest Green */
-  --clr-primary-glow: rgba(16, 185, 129, 0.2);
+  --clr-primary: #4ADE9F; /* Light Mint Green — better contrast & readability */
+  --clr-primary-dark: #2DD4A0; /* Emerald Green */
+  --clr-primary-glow: rgba(74, 222, 159, 0.2);
   --clr-secondary: #283c5a; /* Classic Slate Navy from logo */
   --clr-secondary-light: #3a5075;
   --clr-accent: #82a06e; /* Leaf Green from logo */
@@ -17,7 +17,7 @@
   --clr-text: #1e293b; /* Premium slate for rich readability */
   --clr-text-muted: #64748b;
   --clr-border: rgba(40, 60, 90, 0.08);
-  --grad-cordia: linear-gradient(135deg, #82a06e, #10B981, #283c5a);
+  --grad-cordia: linear-gradient(135deg, #82a06e, #4ADE9F, #283c5a);
   --grad-cordia-dark: linear-gradient(135deg, #3a5075, #283c5a);
 
   /* Typography */
