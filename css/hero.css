@@ -8,7 +8,8 @@
 .hero {
   position: relative;
   background: #ffffff;
-  padding: 90px 0 160px 0; /* Clear 90px sticky header, leave bottom space for overlapping image */
+  padding: 90px 0 160px 0;
+  /* Clear 90px sticky header, leave bottom space for overlapping image */
   overflow: hidden;
   display: flex;
   flex-direction: column;
@@ -56,7 +57,8 @@
   border-radius: var(--radius-full);
   font-size: .8rem;
   font-weight: 700;
-  color: #fef08a; /* Soft gold accent */
+  color: #fef08a;
+  /* Soft gold accent */
   margin-bottom: var(--sp-6);
   text-transform: uppercase;
   letter-spacing: .1em;
@@ -69,23 +71,26 @@
   font-weight: 800;
   letter-spacing: -0.03em;
   line-height: 1.1;
-  color: #ffffff; /* Pure white */
-  text-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  color: #ffffff;
+  /* Pure white */
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
 .hero-sub {
   font-size: 1.25rem;
-  color: #d1fae5; /* Soft mint green */
+  color: #d1fae5;
+  /* Soft mint green */
   font-weight: 500;
   max-width: 720px;
   margin: 0 auto var(--sp-4);
   line-height: 1.6;
-  text-shadow: 0 1px 5px rgba(0,0,0,0.1);
+  text-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
 }
 
 .hero-desc {
   font-size: 1.15rem;
-  color: rgba(255, 255, 255, 0.85); /* Off-white for hierarchy */
+  color: rgba(255, 255, 255, 0.85);
+  /* Off-white for hierarchy */
   font-weight: 400;
   max-width: 800px;
   margin: 0 auto var(--sp-8);
@@ -106,7 +111,8 @@
   position: relative;
   z-index: 3;
   max-width: 1080px;
-  margin: var(--sp-6) auto -240px; /* Big negative bottom margin to overlap about section */
+  margin: var(--sp-6) auto -240px;
+  /* Big negative bottom margin to overlap about section */
   border-radius: 24px;
   overflow: hidden;
   box-shadow: 0 30px 70px rgba(35, 18, 60, 0.18);
@@ -128,6 +134,7 @@
     width: 180%;
     height: 580px;
   }
+
   .hero-image-wrap {
     margin-bottom: -180px;
   }
@@ -137,20 +144,25 @@
   .hero {
     padding: 90px 0 100px 0;
   }
+
   .hero-curved-bg {
     width: 220%;
-    height: 625px;
+    height: 650px;
     clip-path: ellipse(75% 70% at 50% 30%);
   }
+
   .hero-container {
     padding-top: var(--sp-8);
   }
+
   .hero-title {
     font-size: 2.2rem;
   }
+
   .hero-sub {
     font-size: 1.05rem;
   }
+
   .hero-image-wrap {
     margin-bottom: -120px;
     border-radius: 16px;
