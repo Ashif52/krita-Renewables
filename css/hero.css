@@ -51,12 +51,12 @@
   align-items: center;
   gap: var(--sp-2);
   padding: 8px 20px;
-  background: rgba(255, 255, 255, 0.15);
-  border: 1px solid rgba(255, 255, 255, 0.3);
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid rgba(0, 0, 0, 0.15);
   border-radius: var(--radius-full);
   font-size: .8rem;
   font-weight: 700;
-  color: #fef08a; /* Soft gold accent */
+  color: #000000; /* Crisp black */
   margin-bottom: var(--sp-6);
   text-transform: uppercase;
   letter-spacing: .1em;
@@ -69,23 +69,21 @@
   font-weight: 800;
   letter-spacing: -0.03em;
   line-height: 1.1;
-  color: #ffffff; /* Pure white */
-  text-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  color: #000000; /* Crisp black */
 }
 
 .hero-sub {
   font-size: 1.25rem;
-  color: #d1fae5; /* Soft mint green */
-  font-weight: 500;
+  color: #000000; /* Crisp black */
+  font-weight: 600;
   max-width: 720px;
   margin: 0 auto var(--sp-4);
   line-height: 1.6;
-  text-shadow: 0 1px 5px rgba(0,0,0,0.1);
 }
 
 .hero-desc {
   font-size: 1.15rem;
-  color: rgba(255, 255, 255, 0.85); /* Off-white for hierarchy */
+  color: #1e293b; /* Premium dark slate */
   font-weight: 400;
   max-width: 800px;
   margin: 0 auto var(--sp-8);
@@ -100,6 +98,28 @@
   align-items: center;
   margin-bottom: var(--sp-12);
 }
+
+.hero .btn-outline {
+  border-color: rgba(0, 0, 0, 0.25);
+  color: #000000;
+}
+
+.hero .btn-outline:hover {
+  background: #000000;
+  color: #ffffff;
+  border-color: #000000;
+}
+
+.hero .btn-primary {
+  color: #283c5a;
+  border-color: #283c5a;
+}
+
+.hero .btn-primary:hover {
+  color: #ffffff;
+  border-color: #ffffff;
+}
+
 
 /* Centered photographic canopy panel overlapping the section below */
 .hero-image-wrap {

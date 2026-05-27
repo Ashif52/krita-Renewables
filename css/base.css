@@ -229,16 +229,20 @@ input, select, textarea { font-family: inherit; }
 .section-header { margin-bottom: var(--sp-16); }
 
 .section-label {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  gap: var(--sp-2);
   font-size: .75rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: .12em;
-  color: var(--clr-primary);
+  color: #283c5a;
   margin-bottom: var(--sp-4);
-  padding: 6px 14px;
-  background: rgba(0,200,83,.08);
+  padding: 8px 20px;
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid rgba(0, 0, 0, 0.15);
   border-radius: var(--radius-full);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
 }
 
 .section-title {

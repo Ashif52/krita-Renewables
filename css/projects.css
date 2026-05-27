@@ -21,15 +21,16 @@
 .project-card {
   border-radius: var(--radius-lg);
   overflow: hidden;
-  background: #fff;
+  background: var(--clr-white);
   border: 1px solid var(--clr-border);
+  box-shadow: 0 10px 30px rgba(40, 60, 90, 0.04), 0 2px 8px rgba(40, 60, 90, 0.02);
   transition: all .4s var(--ease);
 }
 
 .project-card:hover {
-  transform: translateY(-4px);
-  box-shadow: var(--shadow-lg);
-  border-color: transparent;
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(40, 60, 90, 0.12), 0 4px 12px rgba(40, 60, 90, 0.04);
+  border-color: rgba(74, 222, 159, 0.4);
 }
 
 /* Image */

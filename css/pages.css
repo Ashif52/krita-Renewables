@@ -24,10 +24,24 @@
   padding: var(--sp-10);
   border-radius: var(--radius-lg);
   border: 1px solid var(--clr-border);
-  transition: all .3s var(--ease);
+  background: var(--clr-white);
+  box-shadow: 0 10px 30px rgba(40, 60, 90, 0.04), 0 2px 8px rgba(40, 60, 90, 0.02);
+  transition: all .4s var(--ease);
 }
-.vm-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); }
-.vm-card.dark { background: var(--clr-secondary); color: #fff; border-color: transparent; }
+.vm-card:hover { 
+  transform: translateY(-8px); 
+  box-shadow: 0 20px 40px rgba(40, 60, 90, 0.12), 0 4px 12px rgba(40, 60, 90, 0.04);
+  border-color: rgba(74, 222, 159, 0.4);
+}
+.vm-card.dark { 
+  background: var(--clr-secondary); 
+  color: #fff; 
+  border-color: transparent;
+  box-shadow: 0 10px 30px rgba(35, 18, 60, 0.15);
+}
+.vm-card.dark:hover {
+  border-color: transparent;
+}
 .vm-card.dark p { color: rgba(255,255,255,.7); }
 .vm-card h3 { font-size: 1.4rem; margin-bottom: var(--sp-4); }
 .vm-card p { color: var(--clr-text-muted); line-height: 1.8; }
@@ -43,9 +57,15 @@
   padding: var(--sp-8) var(--sp-5);
   border-radius: var(--radius-lg);
   border: 1px solid var(--clr-border);
-  transition: all .3s var(--ease);
+  background: var(--clr-white);
+  box-shadow: 0 10px 30px rgba(40, 60, 90, 0.04), 0 2px 8px rgba(40, 60, 90, 0.02);
+  transition: all .4s var(--ease);
 }
-.value-card:hover { border-color: var(--clr-primary); box-shadow: var(--shadow-md); transform: translateY(-4px); }
+.value-card:hover { 
+  transform: translateY(-8px); 
+  box-shadow: 0 20px 40px rgba(40, 60, 90, 0.12), 0 4px 12px rgba(40, 60, 90, 0.04);
+  border-color: rgba(74, 222, 159, 0.4); 
+}
 .value-icon {
   width: 56px; height: 56px;
   margin: 0 auto var(--sp-5);
@@ -68,9 +88,15 @@
   padding: var(--sp-8);
   border-radius: var(--radius-lg);
   border: 1px solid var(--clr-border);
-  transition: all .3s var(--ease);
+  background: var(--clr-white);
+  box-shadow: 0 10px 30px rgba(40, 60, 90, 0.04), 0 2px 8px rgba(40, 60, 90, 0.02);
+  transition: all .4s var(--ease);
 }
-.team-card:hover { box-shadow: var(--shadow-lg); transform: translateY(-4px); }
+.team-card:hover { 
+  transform: translateY(-8px); 
+  box-shadow: 0 20px 40px rgba(40, 60, 90, 0.12), 0 4px 12px rgba(40, 60, 90, 0.04);
+  border-color: rgba(74, 222, 159, 0.4); 
+}
 .team-avatar {
   width: 80px; height: 80px;
   border-radius: 50%;
@@ -110,12 +136,17 @@
   gap: 3rem;
   align-items: flex-start;
   padding: 4rem;
-  background: var(--clr-surface);
+  background: var(--clr-white);
   border: 1px solid var(--clr-border);
   border-radius: var(--radius-lg);
-  transition: all 0.3s var(--ease);
+  box-shadow: 0 10px 30px rgba(40, 60, 90, 0.04), 0 2px 8px rgba(40, 60, 90, 0.02);
+  transition: all 0.4s var(--ease);
 }
-.team-card-horizontal:hover { background: #fff; box-shadow: var(--shadow-lg); }
+.team-card-horizontal:hover { 
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(40, 60, 90, 0.12), 0 4px 12px rgba(40, 60, 90, 0.04);
+  border-color: rgba(74, 222, 159, 0.4);
+}
 .team-card-horizontal .team-avatar { flex-shrink: 0; }
 .team-card-horizontal h3 { font-size: 2rem; margin-bottom: 0.5rem; color: var(--clr-secondary); }
 .team-card-horizontal .role {
@@ -135,12 +166,17 @@
   background: var(--clr-white);
   border-radius: var(--radius-lg);
   border: 1px solid var(--clr-border);
+  box-shadow: 0 10px 30px rgba(40, 60, 90, 0.04), 0 2px 8px rgba(40, 60, 90, 0.02);
   transition: all .4s var(--ease);
   overflow: hidden;
   display: flex;
   flex-direction: column;
 }
-.benefit-card:hover { transform: translateY(-8px); box-shadow: var(--shadow-xl); border-color: transparent; }
+.benefit-card:hover { 
+  transform: translateY(-8px); 
+  box-shadow: 0 20px 40px rgba(40, 60, 90, 0.12), 0 4px 12px rgba(40, 60, 90, 0.04);
+  border-color: rgba(74, 222, 159, 0.4); 
+}
 .benefit-img-wrap { height: 220px; overflow: hidden; position: relative; }
 .benefit-img-wrap img { width: 100%; height: 100%; object-fit: cover; transition: transform .6s var(--ease); }
 .benefit-card:hover .benefit-img-wrap img { transform: scale(1.1); }
@@ -203,6 +239,13 @@
   border-radius: var(--radius-lg);
   background: var(--clr-white);
   border: 1px solid var(--clr-border);
+  box-shadow: 0 10px 30px rgba(40, 60, 90, 0.04), 0 2px 8px rgba(40, 60, 90, 0.02);
+  transition: all 0.4s var(--ease);
+}
+.stat-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 15px 35px rgba(40, 60, 90, 0.10);
+  border-color: rgba(74, 222, 159, 0.4);
 }
 .stat-card .stat-num {
   font-family: var(--font-heading);
@@ -316,4 +359,69 @@
   max-width: 760px;
   margin: 0 auto;
   line-height: 1.8;
+}
+
+/* ===== HOME: INLINE LEADERSHIP CARDS ===== */
+.leader-inline-card {
+  background: var(--clr-white) !important;
+  padding: 1.5rem !important;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--clr-border) !important;
+  box-shadow: 0 10px 30px rgba(40, 60, 90, 0.04), 0 2px 8px rgba(40, 60, 90, 0.02) !important;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  transition: all 0.4s var(--ease) !important;
+}
+
+.leader-inline-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 15px 35px rgba(40, 60, 90, 0.10), 0 4px 12px rgba(40, 60, 90, 0.04) !important;
+  border-color: rgba(74, 222, 159, 0.4) !important;
+}
+
+.leader-inline-card .team-avatar-icon {
+  width: 50px;
+  height: 50px;
+  background: linear-gradient(135deg, var(--clr-primary), var(--clr-primary-dark));
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  transition: all 0.4s var(--ease);
+}
+
+.leader-inline-card:hover .team-avatar-icon {
+  transform: scale(1.1);
+  box-shadow: 0 4px 12px rgba(74, 222, 159, 0.3);
+}
+
+/* ===== CAREER CTA CARD ===== */
+.career-cta-card {
+  background: var(--clr-white) !important;
+  border: 1px solid var(--clr-border) !important;
+  border-radius: var(--radius-xl);
+  padding: var(--sp-12) !important;
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: var(--sp-10);
+  align-items: center;
+  box-shadow: 0 10px 40px rgba(40, 60, 90, 0.05), 0 2px 10px rgba(40, 60, 90, 0.02) !important;
+  transition: all 0.4s var(--ease) !important;
+}
+
+.career-cta-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 25px 50px rgba(40, 60, 90, 0.12), 0 4px 15px rgba(40, 60, 90, 0.04) !important;
+  border-color: rgba(74, 222, 159, 0.4) !important;
+}
+
+@media (max-width: 768px) {
+  .career-cta-card {
+    grid-template-columns: 1fr;
+    gap: var(--sp-6);
+    padding: var(--sp-6) !important;
+  }
 }
