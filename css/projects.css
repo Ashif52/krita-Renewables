@@ -23,7 +23,7 @@
   overflow: hidden;
   background: var(--clr-white);
   border: 1px solid var(--clr-border);
-  box-shadow: 0 10px 30px rgba(40, 60, 90, 0.04), 0 2px 8px rgba(40, 60, 90, 0.02);
+  box-shadow: 0 10px 30px rgba(40, 60, 90, 0.10), 0 2px 8px rgba(40, 60, 90, 0.05);
   transition: all .4s var(--ease);
 }
 
