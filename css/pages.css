@@ -355,7 +355,7 @@
 }
 .page-hero .hero-sub {
   font-size: 1.2rem;
-  color: rgba(35, 18, 60, 0.85); /* Deep navy purple body */
+  color: #000000; /* Deep navy purple body */
   max-width: 760px;
   margin: 0 auto;
   line-height: 1.8;
