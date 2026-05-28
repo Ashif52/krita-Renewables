@@ -165,7 +165,7 @@ input, select, textarea { font-family: inherit; }
 
 .btn-primary {
   background: var(--clr-primary);
-  color: #fff;
+  color: var(--clr-secondary);
   border-color: var(--clr-primary);
 }
 .btn-primary:hover {
