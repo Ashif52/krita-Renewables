@@ -13,7 +13,7 @@
 
 /* Logo inside brand column — top-aligns with other column headings */
 .footer-brand .logo-icon {
-  height: 90px;
+  height: 150px;
   display: block;
   margin-bottom: var(--sp-6);
   transition: all .3s var(--ease);
