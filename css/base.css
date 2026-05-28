@@ -125,6 +125,12 @@ textarea {
   font-family: inherit;
 }
 
+input::placeholder,
+textarea::placeholder {
+  color: #94a3b8;
+  opacity: 0.8;
+}
+
 /* ===== LAYOUT UTILITIES ===== */
 .container {
   width: 100%;
