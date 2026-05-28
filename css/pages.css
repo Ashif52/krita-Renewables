@@ -101,12 +101,12 @@
   width: 80px; height: 80px;
   border-radius: 50%;
   margin: 0 auto var(--sp-5);
-  background: linear-gradient(135deg, var(--clr-primary), var(--clr-primary-dark));
+  background: linear-gradient(135deg, #488aed, #283c5a);
   display: flex; align-items: center; justify-content: center;
   color: #fff; font-size: 1.5rem; font-weight: 700; font-family: var(--font-heading);
 }
 .team-card h4 { font-size: 1.1rem; margin-bottom: var(--sp-1); }
-.team-card .role { font-size: .85rem; color: var(--clr-primary); font-weight: 600; }
+.team-card .role { font-size: .85rem; color: #488aed; font-weight: 600; }
 .team-card p { font-size: .88rem; color: var(--clr-text-muted); margin-top: var(--sp-3); line-height: 1.6; }
 
 /* Feature team card */
@@ -119,15 +119,15 @@
 }
 .team-card-feature h3 { font-size: 1.8rem; margin-bottom: 0.5rem; color: var(--clr-secondary); }
 .team-card-feature .role {
-  color: var(--clr-primary); font-weight: 700; margin-bottom: 1.5rem;
+  color: #488aed; font-weight: 700; margin-bottom: 1.5rem;
   letter-spacing: 1px; font-size: 0.85rem; text-transform: uppercase;
 }
 .team-card-feature p { color: var(--clr-text-muted); line-height: 1.8; margin-bottom: 1rem; }
 .team-card-feature .team-avatar {
   width: 100px; height: 100px; font-size: 2rem; margin-bottom: 2rem; margin-left: 0;
-  background: var(--clr-primary); color: #fff; border-radius: 50%;
+  background: linear-gradient(135deg, #488aed, #283c5a); color: #fff; border-radius: 50%;
   display: flex; align-items: center; justify-content: center;
-  font-weight: 800; box-shadow: 0 8px 20px rgba(0, 192, 165, 0.2);
+  font-weight: 800; box-shadow: 0 8px 20px rgba(72, 138, 237, 0.2);
 }
 
 /* Horizontal team card */
@@ -150,7 +150,7 @@
 .team-card-horizontal .team-avatar { flex-shrink: 0; }
 .team-card-horizontal h3 { font-size: 2rem; margin-bottom: 0.5rem; color: var(--clr-secondary); }
 .team-card-horizontal .role {
-  color: var(--clr-primary); font-weight: 700; margin-bottom: 1.5rem;
+  color: #488aed; font-weight: 700; margin-bottom: 1.5rem;
   letter-spacing: 1px; font-size: 0.9rem; text-transform: uppercase;
 }
 .team-card-horizontal p { color: var(--clr-text-muted); line-height: 1.8; margin-bottom: 1rem; font-size: 1.05rem; }
