@@ -1827,7 +1827,7 @@ textarea {
   margin-bottom: 1.5rem;
   letter-spacing: 1px;
   font-size: 0.85rem;
-  text-transform: uppercase;
+  text-transform: none;
 }
 
 .team-card-feature p {
@@ -1885,7 +1885,7 @@ textarea {
   margin-bottom: 1.5rem;
   letter-spacing: 1px;
   font-size: 0.9rem;
-  text-transform: uppercase;
+  text-transform: none;
 }
 
 .team-card-horizontal p {

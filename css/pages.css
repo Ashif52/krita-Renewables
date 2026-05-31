@@ -120,7 +120,7 @@
 .team-card-feature h3 { font-size: 1.8rem; margin-bottom: 0.5rem; color: var(--clr-secondary); }
 .team-card-feature .role {
   color: #488aed; font-weight: 700; margin-bottom: 1.5rem;
-  letter-spacing: 1px; font-size: 0.85rem; text-transform: uppercase;
+  letter-spacing: 1px; font-size: 0.85rem; text-transform: none;
 }
 .team-card-feature p { color: var(--clr-text-muted); line-height: 1.8; margin-bottom: 1rem; }
 .team-card-feature .team-avatar {
@@ -151,7 +151,7 @@
 .team-card-horizontal h3 { font-size: 2rem; margin-bottom: 0.5rem; color: var(--clr-secondary); }
 .team-card-horizontal .role {
   color: #488aed; font-weight: 700; margin-bottom: 1.5rem;
-  letter-spacing: 1px; font-size: 0.9rem; text-transform: uppercase;
+  letter-spacing: 1px; font-size: 0.9rem; text-transform: none;
 }
 .team-card-horizontal p { color: var(--clr-text-muted); line-height: 1.8; margin-bottom: 1rem; font-size: 1.05rem; }
 
