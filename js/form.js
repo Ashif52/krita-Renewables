@@ -78,7 +78,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Prepare data & endpoint
         const formData = new FormData(form);
-        const formSubmitUrl = 'https://formsubmit.co/ajax/info@kritarenewables.com';
+        const formSubmitUrl = 'https://formsubmit.co/ajax/5abbd267851dff77ed0b553e29badc25';
 
         fetch(formSubmitUrl, {
             method: 'POST',
