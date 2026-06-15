@@ -1,7 +1,8 @@
 document.addEventListener('DOMContentLoaded', () => {
     const form = document.getElementById('contactForm');
-    const formContainer = document.getElementById('formContainer');
     const successMsg = document.getElementById('successMsg');
+    const errorMsg = document.getElementById('errorMsg');
+    const sendAnotherBtn = document.getElementById('sendAnotherBtn');
 
     if (!form) return;
 
@@ -62,18 +63,69 @@ document.addEventListener('DOMContentLoaded', () => {
 
         if (!isValid) return;
 
-        // Simulate submission
+        // Start Submission
         const submitBtn = form.querySelector('button[type="submit"]');
-        submitBtn.textContent = 'Sending...';
-        submitBtn.disabled = true;
+        const originalBtnHTML = submitBtn.innerHTML;
 
-        setTimeout(() => {
-            // Show success
-            formContainer.querySelector('h3').style.display = 'none';
+        // Hide previous error message
+        if (errorMsg) {
+            errorMsg.style.display = 'none';
+        }
+
+        // Disable button & Show loading spinner
+        submitBtn.disabled = true;
+        submitBtn.innerHTML = '<span class="spinner"></span> Sending...';
+
+        // Prepare data & endpoint
+        const formData = new FormData(form);
+        const formSubmitUrl = 'https://formsubmit.co/ajax/info@kritarenewables.com';
+
+        fetch(formSubmitUrl, {
+            method: 'POST',
+            body: formData,
+            headers: {
+                'Accept': 'application/json'
+            }
+        })
+        .then(response => {
+            if (response.ok) {
+                return response.json();
+            } else {
+                throw new Error('Network response was not ok');
+            }
+        })
+        .then(data => {
+            // Restore button
+            submitBtn.disabled = false;
+            submitBtn.innerHTML = originalBtnHTML;
+
+            // Success action: reset form, show success, hide form
+            form.reset();
             form.style.display = 'none';
-            successMsg.style.display = 'block';
-        }, 1500);
+            if (successMsg) {
+                successMsg.style.display = 'block';
+            }
+        })
+        .catch(error => {
+            console.error('Submission error:', error);
+            // Restore button
+            submitBtn.disabled = false;
+            submitBtn.innerHTML = originalBtnHTML;
+
+            // Show error message
+            if (errorMsg) {
+                errorMsg.style.display = 'block';
+            }
+        });
     });
+
+    // Reset Form visibility on Send Another Click (without reloading page)
+    if (sendAnotherBtn) {
+        sendAnotherBtn.addEventListener('click', () => {
+            if (successMsg) successMsg.style.display = 'none';
+            form.style.display = 'block';
+        });
+    }
 
     // Clear errors on input
     form.querySelectorAll('.form-control').forEach(input => {

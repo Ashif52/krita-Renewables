@@ -21,6 +21,23 @@
 <link rel="stylesheet" href="css/preloader.css">
 <link rel="stylesheet" href="css/responsive.css?v=3.0">
   <link rel="icon" type="image/png" href="assets/logo.png">
+  <style>
+    /* CSS Loading Spinner */
+    .spinner {
+      display: inline-block;
+      width: 18px;
+      height: 18px;
+      border: 2px solid rgba(255, 255, 255, 0.3);
+      border-radius: 50%;
+      border-top-color: #fff;
+      animation: spin 0.8s ease-in-out infinite;
+      margin-right: 8px;
+      vertical-align: middle;
+    }
+    @keyframes spin {
+      to { transform: rotate(360deg); }
+    }
+  </style>
 </head>
 <body>
   <header class="header scrolled" id="header">
@@ -64,27 +81,39 @@
             <h2 class="mb-2">Send an Inquiry</h2>
             <p class="text-muted mb-8">Fill out the form below and our team will get back to you within 24 hours.</p>
             
-            <form id="contactForm" onsubmit="event.preventDefault(); this.style.display='none'; document.getElementById('successMsg').style.display='block';">
+            <form id="contactForm" action="https://formsubmit.co/info@kritarenewables.com" method="POST">
+              <!-- FormSubmit Configuration Hidden Fields -->
+              <input type="hidden" name="_captcha" value="false">
+              <input type="hidden" name="_template" value="table">
+              <input type="hidden" name="_subject" value="New Contact Form Submission - Krita Renewables">
+              <input type="hidden" name="_next" value="https://kritarenewables.com/thank-you.html">
+
               <div class="form-group">
                 <label class="form-label" for="name">Full Name</label>
-                <input type="text" id="name" class="form-control" placeholder="John Doe" required>
+                <input type="text" id="name" name="name" class="form-control" placeholder="John Doe" required>
               </div>
               <div class="form-group">
                 <label class="form-label" for="company">Company Name</label>
-                <input type="text" id="company" class="form-control" placeholder="Acme Corp" required>
+                <input type="text" id="company" name="company" class="form-control" placeholder="Acme Corp" required>
               </div>
               <div class="form-group">
                 <label class="form-label" for="email">Work Email</label>
-                <input type="email" id="email" class="form-control" placeholder="john@company.com" required>
+                <input type="email" id="email" name="email" class="form-control" placeholder="john@company.com" required>
               </div>
               <div class="form-group">
                 <label class="form-label" for="phone">Phone Number</label>
-                <input type="tel" id="phone" class="form-control" placeholder="+91 00000 00000" required>
+                <input type="tel" id="phone" name="phone" class="form-control" placeholder="+91 00000 00000" required>
               </div>
               <div class="form-group">
                 <label class="form-label" for="message">Project Details</label>
-                <textarea id="message" class="form-control" placeholder="Tell us about your project requirements..." required></textarea>
+                <textarea id="message" name="message" class="form-control" placeholder="Tell us about your project requirements..." required></textarea>
               </div>
+              
+              <!-- Submission Error Message Container -->
+              <div id="errorMsg" style="display: none; color: #ef4444; background: rgba(239, 68, 68, 0.05); border: 1px solid rgba(239, 68, 68, 0.2); padding: 12px; border-radius: var(--radius-sm); margin-bottom: 1rem; font-size: 0.9rem; text-align: center; font-weight: 500;">
+                An error occurred while sending your message. Please try again.
+              </div>
+
               <button type="submit" class="btn btn-primary btn-block btn-lg mt-4">Send Message →</button>
             </form>
 
@@ -92,7 +121,7 @@
               <div style="font-size: 3rem; color: var(--clr-primary); margin-bottom: 1rem;">✓</div>
               <h3>Message Sent Successfully!</h3>
               <p>Thank you for reaching out. One of our engineers will contact you shortly.</p>
-              <button onclick="location.reload()" class="btn btn-outline-dark mt-6">Send Another Message</button>
+              <button id="sendAnotherBtn" class="btn btn-outline-dark mt-6">Send Another Message</button>
             </div>
           </div>
 
@@ -280,5 +309,6 @@
   </footer>
 
   <script src="js/main.js"></script>
+  <script src="js/form.js"></script>
 </body>
 </html>
