@@ -53,17 +53,21 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // ===== 4. SCROLL REVEAL =====
-    const revealObserver = new IntersectionObserver((entries, obs) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('visible');
-                obs.unobserve(entry.target);
-            }
-        });
-    }, { threshold: 0.12 });
+    // ===== 4. SCROLL REVEAL (Progressive Enhancement) =====
+    if ('IntersectionObserver' in window) {
+        const revealObserver = new IntersectionObserver((entries, obs) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    obs.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.12 });
 
-    document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+        document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+    } else {
+        document.querySelectorAll('.reveal').forEach(el => el.classList.add('visible'));
+    }
 
     // ===== 5. COUNT-UP ANIMATION =====
     const countElements = document.querySelectorAll('[data-count]');

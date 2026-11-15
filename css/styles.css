@@ -1578,16 +1578,21 @@ textarea {
   opacity: 1
 }
 
-/* ===== SCROLL ANIMATIONS ===== */
+/* ===== SCROLL ANIMATIONS (Progressive Enhancement) ===== */
 .reveal {
-  opacity: 0;
-  transform: translateY(24px);
-  transition: opacity .7s var(--ease), transform .7s var(--ease)
+  opacity: 1;
+  transform: none;
 }
 
-.reveal.visible {
+html.js .reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity .7s var(--ease), transform .7s var(--ease);
+}
+
+html.js .reveal.visible {
   opacity: 1;
-  transform: translateY(0)
+  transform: translateY(0);
 }
 
 .reveal-delay-1 {

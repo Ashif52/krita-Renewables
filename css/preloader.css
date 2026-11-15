@@ -1,4 +1,13 @@
 /* ===== PRELOADER ===== */
+/* Progressive Enhancement: Hide preloader if JS is disabled */
+html:not(.js) #preloader {
+  display: none !important;
+}
+
+html:not(.js) body.preloader-active {
+  overflow: auto !important;
+}
+
 body.preloader-active {
   overflow: hidden;
 }

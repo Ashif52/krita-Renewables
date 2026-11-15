@@ -1,10 +1,23 @@
-// ===== PRELOADER =====
+// ===== PRELOADER WITH FAIL-SAFE & PROGRESSIVE ENHANCEMENT =====
 (function () {
   const preloader = document.getElementById('preloader');
   const percentEl = document.getElementById('preloader-percent');
   const fillCircle = document.getElementById('preloader-fill-circle');
 
   if (!preloader) return;
+
+  // Add active lock only when JavaScript is running
+  document.body.classList.add('preloader-active');
+
+  function dismissPreloader() {
+    if (!preloader.classList.contains('hidden')) {
+      preloader.classList.add('hidden');
+      document.body.classList.remove('preloader-active');
+    }
+  }
+
+  // Hard safety timeout: Never allow preloader to trap users or crawlers
+  const safetyTimeout = setTimeout(dismissPreloader, 2500);
 
   const circumference = 2 * Math.PI * 48; // r=48 from SVG
   let progress = 0;
@@ -25,11 +38,8 @@
     if (progress < 1) {
       requestAnimationFrame(tick);
     } else {
-      // Preloader done — fade out
-      setTimeout(() => {
-        preloader.classList.add('hidden');
-        document.body.classList.remove('preloader-active');
-      }, 300);
+      clearTimeout(safetyTimeout);
+      setTimeout(dismissPreloader, 300);
     }
   }
 

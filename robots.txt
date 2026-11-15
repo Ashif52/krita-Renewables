@@ -1,4 +1,5 @@
 User-agent: *
+Disallow: /thank-you.html
 Allow: /
 
 Sitemap: https://kritarenewables.com/sitemap.xml

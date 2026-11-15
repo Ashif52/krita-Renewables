@@ -383,20 +383,22 @@ textarea::placeholder {
   font-size: 0.9rem;
 }
 
-/* ===== SCROLL ANIMATIONS ===== */
+/* ===== SCROLL ANIMATIONS (Progressive Enhancement) ===== */
+/* Default state: fully visible so content is NEVER hidden if JS fails or is absent */
 .reveal {
+  opacity: 1;
+  transform: none;
+}
+
+/* When JavaScript is enabled and active, enable smooth scroll animations */
+html.js .reveal {
   opacity: 0;
   transform: translateY(24px);
   transition: opacity .7s var(--ease), transform .7s var(--ease);
 }
 
-.reveal.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-/* support both class names */
-.reveal.is-visible {
+html.js .reveal.visible,
+html.js .reveal.is-visible {
   opacity: 1;
   transform: translateY(0);
 }
